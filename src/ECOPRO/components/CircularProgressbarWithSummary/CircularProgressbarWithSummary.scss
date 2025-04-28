@@ -1,0 +1,26 @@
+// @import '../../styles/colors';
+
+.circular_progressbar_with_summary {
+   color: #6D6C6C;
+  font-size: 23px;
+  font-weight: 500;
+  &--progress_bar {
+    width: 110px;
+  }
+  &--title {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  &--bottom {
+    display: flex;
+    font-size: 16px;
+    margin-top: -10px;
+  }
+  &--value {
+    flex: 1;
+    text-align: left;
+    &-to {
+      text-align: right;
+    }
+  }
+}

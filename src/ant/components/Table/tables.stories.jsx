@@ -1,0 +1,57 @@
+// src/components/Tables.stories.jsx
+import React from "react";
+import CommonTable from "./commonTable";
+import TableWithDraggableRow from "./tableWithDraggableRow";
+import TableWithFilter from "./tableWithFilter";
+import TableWithPagination from "./tableWithPagination";
+import TableWithSearch from "./tableWithSearch";
+import TableWithSort from "./tableWithSort";
+
+export default {
+  title: "Example/antd/Tables",
+  components: CommonTable,
+};
+
+const data = [
+  {
+    key: "1",
+    name: "John Brown",
+    age: 32,
+    address: "New York No. 1 Lake Park",
+  },
+  {
+    key: "2",
+    name: "Jim Green",
+    age: 42,
+    address: "London No. 1 Lake Park",
+  },
+  {
+    key: "3",
+    name: "Joe Black",
+    age: 32,
+    address: "Sidney No. 1 Lake Park",
+  },
+];
+
+const Basic = (args) => <CommonTable {...args} />;
+const WithDraggableRow = (args) => <TableWithDraggableRow {...args} />;
+const WithFilter = (args) => <TableWithFilter {...args} />;
+const WithPagination = (args) => <TableWithPagination {...args} />;
+const WithSearch = (args) => <TableWithSearch {...args} />;
+const WithSort = (args) => <TableWithSort {...args} />;
+
+export const Common = Basic.bind({});
+export const DraggableTable = WithDraggableRow.bind({});
+export const FilterTable = WithFilter.bind({});
+export const PaginationTable = WithPagination.bind({});
+export const SearchTable = WithSearch.bind({});
+export const SortTable = WithSort.bind({});
+
+const CommonArgs = { data };
+
+Common.args = CommonArgs;
+DraggableTable.args = CommonArgs;
+FilterTable.args = CommonArgs;
+PaginationTable.args = CommonArgs;
+SearchTable.args = CommonArgs;
+SortTable.args = CommonArgs;
