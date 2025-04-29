@@ -1,0 +1,12 @@
+.droplist{
+    cursor: pointer;
+    color: #217dff;
+}
+
+.droplist:hover {
+    color: #68b0fd;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+/*# sourceMappingURL=ant-components-Dropdown-dropdowns-stories.cbdf1ef7.chunk.css.map*/
