@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 Default.args = {
   glyphNameLeft: "arrow-left",
   glyphNameRight: "arrow-right",
-  children: "Click Me",
+  children: "Добавить",
   primary: true,
   className: "custom-class",
   onClick: () => alert("Button clicked!"),
@@ -21,7 +21,7 @@ Default.args = {
 
 export const WithoutIcons = Template.bind({});
 WithoutIcons.args = {
-  children: "No Icons",
+  children: "Добавить",
   primary: false,
   onClick: () => alert("Button without icons clicked!"),
 };
@@ -29,7 +29,7 @@ WithoutIcons.args = {
 export const WithOnlyLeftIcon = Template.bind({});
 WithOnlyLeftIcon.args = {
   glyphNameLeft: "arrow-left",
-  children: "Left Icon Only",
+  children: "Добавить",
   primary: true,
   onClick: () => alert("Button with left icon clicked!"),
 };
@@ -37,7 +37,7 @@ WithOnlyLeftIcon.args = {
 export const WithOnlyRightIcon = Template.bind({});
 WithOnlyRightIcon.args = {
   glyphNameRight: "arrow-right",
-  children: "Right Icon Only",
+  children: "Добавить",
   primary: false,
   onClick: () => alert("Button with right icon clicked!"),
 };

@@ -2,7 +2,7 @@ import React from "react";
 import TestButton from "./TestButton";
 
 export default {
-  title: "Example/antd/TestButton",
+  title: "antd/VariantButton",
   component: TestButton,
 };
 

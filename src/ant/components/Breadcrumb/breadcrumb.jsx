@@ -1,20 +1,20 @@
-import React from 'react';
-import { Breadcrumb } from 'antd';
+import React from "react";
+import { Breadcrumb } from "antd";
 
 const BreadcrumbComponent = () => (
   <Breadcrumb
     items={[
       {
-        title: 'Home',
+        title: "Home",
       },
       {
-        title: <a href="">Application Center</a>,
+        title: <a href="">Паспорт работ</a>,
       },
       {
-        title: <a href="">Application List</a>,
+        title: <a href="">Полетные задания</a>,
       },
       {
-        title: 'An Application',
+        title: "Создание",
       },
     ]}
   />

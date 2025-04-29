@@ -68,7 +68,7 @@ export const CheckedWithLabel = Template.bind({});
 CheckedWithLabel.args = {
   checked: true,
   name: "input1",
-  label: "label",
+  label: "Включить",
 };
 
 export const Disabled = Template.bind({});
@@ -82,5 +82,5 @@ DisabledAndCheckedWithLabel.args = {
   disabled: true,
   checked: true,
   name: "input3",
-  label: "label",
+  label: "Включить",
 };

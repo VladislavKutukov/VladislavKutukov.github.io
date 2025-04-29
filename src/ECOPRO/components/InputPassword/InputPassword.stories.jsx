@@ -89,16 +89,18 @@ export default {
 const Template = (args) => <InputPassword {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  label: "Введите пароль",
+};
 
 export const Large = Template.bind({});
 Large.args = {
+  label: "Введите пароль",
   className: "size--large",
 };
 
 export const Small = Template.bind({});
-Small.args = {
-  className: "size--small",
-};
+Small.args = { label: "Введите пароль", className: "size--small" };
 
 export const NoLabel = Template.bind({});
 NoLabel.args = {
@@ -106,16 +108,10 @@ NoLabel.args = {
 };
 
 export const Required = Template.bind({});
-Required.args = {
-  isRequired: true,
-};
+Required.args = { label: "Введите пароль", isRequired: true };
 
 export const Inactive = Template.bind({});
-Inactive.args = {
-  disabled: true,
-};
+Inactive.args = { label: "Введите пароль", disabled: true };
 
 export const Error = Template.bind({});
-Error.args = {
-  error: "Ошибка",
-};
+Error.args = { label: "Введите пароль", error: "Ошибка" };

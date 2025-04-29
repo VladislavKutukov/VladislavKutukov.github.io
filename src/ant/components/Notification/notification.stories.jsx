@@ -1,11 +1,11 @@
 import React from "react";
 import Notifications from "./notification.jsx";
- 
+
 export default {
-    title: "Example/antd/Notifications",
-    component: Notifications,
-}
+  title: "antd/Notifications",
+  component: Notifications,
+};
 
-const Template = (args) => <Notifications {...args}/>
+const Template = (args) => <Notifications {...args} />;
 
-export const NotificationExample = Template.bind({})
+export const NotificationExample = Template.bind({});

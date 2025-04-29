@@ -10,20 +10,20 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: "Primary Button",
+  children: "Добавить",
   variant: ButtonVariant.PRIMARY,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  children: "Disabled Button",
+  children: "Добавить",
   disabled: true,
   variant: ButtonVariant.PRIMARY,
 };
 
 export const Active = Template.bind({});
 Active.args = {
-  children: "Active Button",
+  children: "Добавить",
   isActive: true,
   variant: ButtonVariant.PRIMARY,
 };

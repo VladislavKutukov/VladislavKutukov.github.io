@@ -10,15 +10,15 @@ const NoLabel = Template.bind({});
 
 Default.args = {
   percentage: 98,
-  from: "From",
-  to: "To",
+  from: "От",
+  to: "До",
   summary: "98%",
 };
 
 WithCaptions.args = {
   percentage: 18,
-  from: "From",
-  to: "To",
+  from: "От",
+  to: "До",
   summary: "18%",
 };
 

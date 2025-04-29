@@ -1,15 +1,21 @@
-import React from 'react';
-import { Alert } from 'antd';
+import React from "react";
+import { Alert } from "antd";
 
 const AlertMessages = () => (
   <>
-    <Alert message="Success Text" type="success" />
+    <Alert
+      message="Создание полетного задания прошло успешно!"
+      type="success"
+    />
     <br />
-    <Alert message="Info Text" type="info" />
+    <Alert message="Вы изменили подложку карты" type="info" />
     <br />
-    <Alert message="Warning Text" type="warning" />
+    <Alert message="Заполните все обязательные поля!" type="warning" />
     <br />
-    <Alert message="Error Text" type="error" />
+    <Alert
+      message="Возникла ошибка при создании полетного задания!"
+      type="error"
+    />
   </>
 );
 

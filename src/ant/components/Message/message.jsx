@@ -1,32 +1,32 @@
-import React from 'react';
-import { Button, message, Space } from 'antd';
+import React from "react";
+import { Button, message, Space } from "antd";
 const MessageExample = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const success = () => {
     messageApi.open({
-      type: 'success',
-      content: 'This is a success message',
+      type: "success",
+      content: "Запись в справочнике паспорт работ успешно создана",
     });
   };
   const error = () => {
     messageApi.open({
-      type: 'error',
-      content: 'This is an error message',
+      type: "error",
+      content: "Заполните обязательные поля!",
     });
   };
   const warning = () => {
     messageApi.open({
-      type: 'warning',
-      content: 'This is a warning message',
+      type: "warning",
+      content: "Запись в справочнике паспорт работ не создана",
     });
   };
   return (
     <>
       {contextHolder}
       <Space>
-        <Button onClick={success}>Success</Button>
-        <Button onClick={error}>Error</Button>
-        <Button onClick={warning}>Warning</Button>
+        <Button onClick={success}>Успешно</Button>
+        <Button onClick={error}>Ошибка</Button>
+        <Button onClick={warning}>Предупреждение</Button>
       </Space>
     </>
   );

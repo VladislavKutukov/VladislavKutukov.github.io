@@ -1,5 +1,5 @@
-import React from 'react';
-import { Divider, Steps } from 'antd';
+import React from "react";
+import { Divider, Steps } from "antd";
 
 const DotStyleSteps = (style) => (
   <div style={style}>
@@ -8,16 +8,16 @@ const DotStyleSteps = (style) => (
       current={1}
       items={[
         {
-          title: 'Finished',
-          description: 'This is a description.',
+          title: "Пункт 1",
+          description: "Описание",
         },
         {
-          title: 'In Progress',
-          description: 'This is a description.',
+          title: "Пункт 2",
+          description: "Описание",
         },
         {
-          title: 'Waiting',
-          description: 'This is a description.',
+          title: "Пункт 3",
+          description: "Описание",
         },
       ]}
     />
@@ -28,24 +28,16 @@ const DotStyleSteps = (style) => (
       direction="vertical"
       items={[
         {
-          title: 'Finished',
-          description: 'This is a description. This is a description.',
+          title: "Пункт 1",
+          description: "Описание",
         },
         {
-          title: 'Finished',
-          description: 'This is a description. This is a description.',
+          title: "Пункт 2",
+          description: "Описание",
         },
         {
-          title: 'In Progress',
-          description: 'This is a description. This is a description.',
-        },
-        {
-          title: 'Waiting',
-          description: 'This is a description.',
-        },
-        {
-          title: 'Waiting',
-          description: 'This is a description.',
+          title: "Пункт 3",
+          description: "Описание",
         },
       ]}
     />

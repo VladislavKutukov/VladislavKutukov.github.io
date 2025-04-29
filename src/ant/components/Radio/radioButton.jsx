@@ -1,10 +1,10 @@
-import React from 'react';
-import { Flex, Radio } from 'antd';
+import React from "react";
+import { Flex, Radio } from "antd";
 
 const options = [
-  { label: 'Apple', value: 'Apple' },
-  { label: 'Pear', value: 'Pear' },
-  { label: 'Orange', value: 'Orange' },
+  { label: "GNSS", value: "Создание" },
+  { label: "DN", value: "Редактирование" },
+  { label: "CM", value: "Удаление" },
 ];
 
 const RadioButton = () => (
@@ -17,7 +17,12 @@ const RadioButton = () => (
       optionType="button"
       buttonStyle="solid"
     />
-    <Radio.Group block options={options} defaultValue="Pear" optionType="button" />
+    <Radio.Group
+      block
+      options={options}
+      defaultValue="Pear"
+      optionType="button"
+    />
   </Flex>
 );
 

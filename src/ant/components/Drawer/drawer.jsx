@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Button, Drawer, Radio, Space } from 'antd';
+import React, { useState } from "react";
+import { Button, Drawer, Radio, Space } from "antd";
 
 const DrawerForm = () => {
   const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState('right');
+  const [placement, setPlacement] = useState("right");
   const showDrawer = () => {
     setOpen(true);
   };
-  const onChange = e => {
+  const onChange = (e) => {
     setPlacement(e.target.value);
   };
   const onClose = () => {
@@ -23,27 +23,27 @@ const DrawerForm = () => {
           <Radio value="left">left</Radio>
         </Radio.Group>
         <Button type="primary" onClick={showDrawer}>
-          Open
+          Открыть
         </Button>
       </Space>
       <Drawer
-        title="Drawer with extra actions"
+        title="Список справочников"
         placement={placement}
         width={500}
         onClose={onClose}
         open={open}
         extra={
           <Space>
-            <Button onClick={onClose}>Cancel</Button>
+            <Button onClick={onClose}>Закрыть</Button>
             <Button type="primary" onClick={onClose}>
-              OK
+              Сохранить
             </Button>
           </Space>
         }
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <p>Паспорт работ</p>
+        <p>Дешифрирование</p>
+        <p>Верификация</p>
       </Drawer>
     </>
   );

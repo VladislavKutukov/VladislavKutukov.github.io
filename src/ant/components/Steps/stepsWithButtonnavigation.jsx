@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Button, message, Steps, theme } from 'antd';
+import React, { useState } from "react";
+import { Button, message, Steps, theme } from "antd";
 
 const steps = [
   {
-    title: 'First',
-    content: 'First-content',
+    title: "Первый пункт",
+    content: "First-content",
   },
   {
-    title: 'Second',
-    content: 'Second-content',
+    title: "Второй пункт",
+    content: "Second-content",
   },
   {
-    title: 'Last',
-    content: 'Last-content',
+    title: "Третий пункт",
+    content: "Last-content",
   },
 ];
 
@@ -25,10 +25,10 @@ const StepsWithButtonNavigation = (style) => {
   const prev = () => {
     setCurrent(current - 1);
   };
-  const items = steps.map(item => ({ key: item.title, title: item.title }));
+  const items = steps.map((item) => ({ key: item.title, title: item.title }));
   const contentStyle = {
-    lineHeight: '260px',
-    textAlign: 'center',
+    lineHeight: "260px",
+    textAlign: "center",
     color: token.colorTextTertiary,
     backgroundColor: token.colorFillAlter,
     borderRadius: token.borderRadiusLG,
@@ -42,17 +42,20 @@ const StepsWithButtonNavigation = (style) => {
       <div style={{ marginTop: 24 }}>
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>
-            Next
+            Далее
           </Button>
         )}
         {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Processing complete!')}>
-            Done
+          <Button
+            type="primary"
+            onClick={() => message.success("Processing complete!")}
+          >
+            Завершить
           </Button>
         )}
         {current > 0 && (
-          <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
-            Previous
+          <Button style={{ margin: "0 8px" }} onClick={() => prev()}>
+            Назад
           </Button>
         )}
       </div>

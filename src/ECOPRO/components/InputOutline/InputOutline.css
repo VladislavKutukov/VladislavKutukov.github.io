@@ -62,11 +62,11 @@
 }
 
 .input_outline__input:hover {
-  border: 0.067em solid var(--input-outline-color-border-hover);
+  border: 0.067em solid var(--color-yellow-8);
 }
 
 .input_outline__input:focus-within {
-  border: 0.067em solid var(--input-outline-color-border-focus);
+  border: 0.067em solid var(--color-yellow-8);
 }
 
 .input_outline__input:focus-within .input_outline__label {

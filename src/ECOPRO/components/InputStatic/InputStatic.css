@@ -54,11 +54,11 @@
 }
 
 .input_static__input:hover {
-  border: 0.067em solid var(--input-static-color-border-hover);
+  border: 0.067em solid var(--color-yellow-8);
 }
 
 .input_static__input:focus-within {
-  border: 0.067em solid var(--input-static-color-border-focus);
+  border: 0.067em solid var(--color-yellow-8);
 }
 
 .input_static__input input {

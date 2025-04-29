@@ -22,17 +22,17 @@ const CommonTable = ({ data }) => {
       }}
       columns={[
         {
-          title: "Name",
+          title: "Станция GNSS",
           dataIndex: "name",
           key: "name",
         },
         {
-          title: "Age",
+          title: "БЛА",
           dataIndex: "age",
           key: "age",
         },
         {
-          title: "Address",
+          title: "Камеры",
           dataIndex: "address",
           key: "address",
         },

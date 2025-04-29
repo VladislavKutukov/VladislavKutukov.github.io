@@ -1,26 +1,26 @@
-import React from 'react';
-import { Button, message, Popconfirm } from 'antd';
+import React from "react";
+import { Button, message, Popconfirm } from "antd";
 
-const confirm = e => {
+const confirm = (e) => {
   console.log(e);
-  message.success('Click on Yes');
+  message.success("Click on Yes");
 };
 
-const cancel = e => {
+const cancel = (e) => {
   console.log(e);
-  message.error('Click on No');
+  message.error("Click on No");
 };
 
 const PopconfirmExample = () => (
   <Popconfirm
-    title="Delete the task"
-    description="Are you sure to delete this task?"
+    title="Удаление записи"
+    description="Вы уверены что хотите удалить запись?"
     onConfirm={confirm}
     onCancel={cancel}
-    okText="Yes"
-    cancelText="No"
+    okText="Да"
+    cancelText="Нет"
   >
-    <Button danger>Delete</Button>
+    <Button danger>Удалить</Button>
   </Popconfirm>
 );
 

@@ -3,6 +3,7 @@
 import React from "react";
 import TopBar from "./TopBar";
 import Button from "../Button";
+import NavigationLinks from "../NavigationLinks";
 
 export default {
   title: "ECOPRO/TopBar",
@@ -15,15 +16,31 @@ const Template = (args) => <TopBar {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   onToggleMenu: () => alert("Menu toggled!"),
-  LogoComponent: <div style={{ fontWeight: "bold" }}>My Logo</div>,
-  RightSideRenderFn: () => <Button>Right Button</Button>,
-  children: <div>Central Content</div>,
+  LogoComponent: <div style={{ fontWeight: "bold" }}>Логотип</div>,
+  RightSideRenderFn: () => <Button>Поиск</Button>,
+  children: (
+    <NavigationLinks
+      links={[
+        { to: "/home", caption: "Паспорт работ" },
+        { to: "/about", caption: "Справочники" },
+        { to: "/contact", caption: "Отчеты" },
+      ]}
+    />
+  ),
 };
 
 // История без кнопки меню
 export const WithoutMenuButton = Template.bind({});
 WithoutMenuButton.args = {
-  LogoComponent: <div style={{ fontWeight: "bold" }}>My Logo</div>,
-  RightSideRenderFn: () => <Button>Right Button</Button>,
-  children: <div>Central Content</div>,
+  LogoComponent: <div style={{ fontWeight: "bold" }}>Логотип</div>,
+  RightSideRenderFn: () => <Button>Поиск</Button>,
+  children: (
+    <NavigationLinks
+      links={[
+        { to: "/home", caption: "Паспорт работ" },
+        { to: "/about", caption: "Справочники" },
+        { to: "/contact", caption: "Отчеты" },
+      ]}
+    />
+  ),
 };

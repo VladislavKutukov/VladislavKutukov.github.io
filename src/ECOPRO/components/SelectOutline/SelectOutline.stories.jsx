@@ -32,7 +32,7 @@ const data = [
 ];
 
 export default {
-  title: "ECOPRO/Outline",
+  title: "ECOPRO/Select",
   component: SelectOutline,
   argTypes: {
     className: {

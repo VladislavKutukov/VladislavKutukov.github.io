@@ -5,7 +5,7 @@ import AntDatePicker from "./AntDatePicker";
 import moment from "moment";
 
 export default {
-  title: "Example/antd/AntDatePicker",
+  title: "antd/AntDatePicker",
   component: AntDatePicker,
   argTypes: {},
 };
@@ -23,7 +23,7 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: "Placeholder",
+  placeholder: "Выберите дату",
 };
 
 export const NeedConfirm = Template.bind({});

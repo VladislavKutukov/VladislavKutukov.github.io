@@ -77,13 +77,13 @@ export const CheckedWithLabel = Template.bind({});
 CheckedWithLabel.args = {
   checked: true,
   name: "input1",
-  label: "label",
+  label: "Обновить",
 };
 export const CheckedWithLineType = Template.bind({});
 CheckedWithLineType.args = {
   checked: true,
   name: "input2",
-  label: "label",
+  label: "Обновить",
   markType: "line",
 };
 export const Disabled = Template.bind({});
@@ -97,5 +97,5 @@ DisabledAndCheckedWithLabel.args = {
   disabled: true,
   checked: true,
   name: "input4",
-  label: "label",
+  label: "Обновить",
 };

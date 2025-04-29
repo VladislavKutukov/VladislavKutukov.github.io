@@ -2,10 +2,10 @@ import React from "react";
 import ModalForm from "./modal";
 
 export default {
-    title: "Example/antd/Modal",
-    component: ModalForm,
-}
+  title: "antd/Modal",
+  component: ModalForm,
+};
 
-const Template = (args) => <ModalForm {...args}/>
+const Template = (args) => <ModalForm {...args} />;
 
-export const ModalFormExample = Template.bind({})
+export const ModalFormExample = Template.bind({});

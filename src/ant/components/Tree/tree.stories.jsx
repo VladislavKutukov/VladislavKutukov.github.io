@@ -3,13 +3,12 @@ import TreeExample from "./tree";
 import TreeWithSearch from "./treeWithSearch";
 
 export default {
-    title: "Example/antd/Tree",
-    component: TreeExample,
-}
+  title: "antd/Tree",
+  component: TreeExample,
+};
 
-const DraggableTree = (args) => <TreeExample {...args}/>
-const WithSearch = (args) => <TreeWithSearch {...args}/>
+const DraggableTree = (args) => <TreeExample {...args} />;
+const WithSearch = (args) => <TreeWithSearch {...args} />;
 
 export const Draggable = DraggableTree.bind({});
-export const Search = WithSearch.bind({})
-
+export const Search = WithSearch.bind({});

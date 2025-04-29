@@ -1,34 +1,34 @@
-import React from 'react';
-import { Cascader } from 'antd';
+import React from "react";
+import { Cascader } from "antd";
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Паспорт работ",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Палетные задания",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
+            value: "xihu",
+            label: "Просмотр",
           },
         ],
       },
     ],
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Паспорт работ",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "hangzhou",
+        label: "Палетные задания",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
+            value: "xihu",
+            label: "Просмотр",
           },
         ],
       },
@@ -36,7 +36,7 @@ const options = [
   },
 ];
 
-const onChange = value => {
+const onChange = (value) => {
   console.log(value);
 };
 
@@ -51,16 +51,36 @@ const Cascaders = () => (
     <Cascader size="small" options={options} onChange={onChange} />
     <br />
     <br />
-    <Cascader placeholder="Please select" variant="borderless" options={options} onChange={onChange}/>
+    <Cascader
+      placeholder="Выберите справочник"
+      variant="borderless"
+      options={options}
+      onChange={onChange}
+    />
     <br />
     <br />
-    <Cascader placeholder="Please select" variant="filled"  options={options} onChange={onChange}/>
+    <Cascader
+      placeholder="Выберите справочник"
+      variant="filled"
+      options={options}
+      onChange={onChange}
+    />
     <br />
     <br />
-    <Cascader placeholder="Please select" variant="outlined"  options={options} onChange={onChange}/>
+    <Cascader
+      placeholder="Выберите справочник"
+      variant="outlined"
+      options={options}
+      onChange={onChange}
+    />
     <br />
     <br />
-    <Cascader placeholder="Please select" variant="underlined"  options={options} onChange={onChange}/>
+    <Cascader
+      placeholder="Выберите справочник"
+      variant="underlined"
+      options={options}
+      onChange={onChange}
+    />
   </>
 );
 

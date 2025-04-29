@@ -1,39 +1,48 @@
-import React from 'react';
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import React from "react";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Space } from "antd";
 import "./dropdown.css";
 
 const items = [
   {
     label: (
-      <a href="https://www.antgroup.com" target="_blank" rel="noopener noreferrer">
-        1st menu item
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.antgroup.com"
+      >
+        Дешифрирование
       </a>
     ),
-    key: '0',
+    key: "0",
   },
   {
     label: (
-      <a href="https://www.aliyun.com" target="_blank" rel="noopener noreferrer">
-        2nd menu item
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.aliyun.com"
+      >
+        Верификация
       </a>
     ),
-    key: '1',
+    key: "1",
   },
   {
-    type: 'divider',
+    type: "divider",
   },
   {
-    label: '3rd menu item',
-    key: '3',
+    label: "Паспорт работ",
+    key: "3",
+    disabled: true,
   },
 ];
 
 const ClickDropdown = () => (
-  <Dropdown menu={{ items }} trigger={['click']}>
-    <a onClick={e => e.preventDefault()}>
-      <Space className='droplist'>
-        Click me
+  <Dropdown menu={{ items }} trigger={["click"]}>
+    <a onClick={(e) => e.preventDefault()}>
+      <Space className="droplist">
+        Список справочников по клику
         <DownOutlined />
       </Space>
     </a>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,  BrowserRouter as Router, } from "react-router-dom";
 
 import type { NavigationLinksProps } from "./NavigationLinks.type";
 import "./NavigationLinks.css";
@@ -11,18 +11,15 @@ function NavigationLinks({ className, links = [] }: NavigationLinksProps) {
       <ul className="navigation_links__list">
         {links.map((link,index) => (
           <li key={index} className="navigation_links__item">
-            <Link
-              to={link.to}
-              // className={({ isActive }) =>
-              //   joinClassNames([
-              //     "navigation_links__link",
-              //     { "navigation_links--active": isActive },
-              //   ])
-              // }
-              // end
+          <div
+              
+              className={"navigation_links__link"
+              }
+              
             >
               {link.caption}
-            </Link>
+            </div>
+           
           </li>
         ))}
       </ul>

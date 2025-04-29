@@ -3,9 +3,9 @@ import Selector from "./Selector";
 
 // Определим примерные данные
 const items = [
-  { value: "1", displayValue: "Первый элемент" },
-  { value: "2", displayValue: "Второй элемент" },
-  { value: "3", displayValue: "Третий элемент" },
+  { value: "1", displayValue: "СМ" },
+  { value: "2", displayValue: "JR-90B" },
+  { value: "3", displayValue: "JR-S301" },
 ];
 
 // Создаем компонент, который будем экспортировать для Storybook

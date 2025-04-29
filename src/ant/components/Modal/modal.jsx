@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import React, { useState } from "react";
+import { Button, Modal } from "antd";
 
 const ModalForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,12 +15,15 @@ const ModalForm = () => {
   return (
     <>
       <Button type="primary" onClick={showModal}>
-        Open Modal
+        Открыть модальное окно
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+      <Modal
+        title="Создание"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Окно подтверждения действий на странице "Паспорт работ"</p>
       </Modal>
     </>
   );

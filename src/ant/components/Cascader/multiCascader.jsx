@@ -1,35 +1,35 @@
-import React from 'react';
-import { Cascader } from 'antd';
+import React from "react";
+import { Cascader } from "antd";
 const { SHOW_CHILD } = Cascader;
 
 const options = [
   {
-    label: 'Light',
-    value: 'light',
+    label: "Группа 1",
+    value: "light",
     children: Array.from({ length: 20 }).map((_, index) => ({
       label: `Number ${index}`,
       value: index,
     })),
   },
   {
-    label: 'Bamboo',
-    value: 'bamboo',
+    label: "Группа 2",
+    value: "bamboo",
     children: [
       {
-        label: 'Little',
-        value: 'little',
+        label: "Подгруппа",
+        value: "little",
         children: [
           {
-            label: 'Toy Fish',
-            value: 'fish',
+            label: "Элемент 1",
+            value: "fish",
           },
           {
-            label: 'Toy Cards',
-            value: 'cards',
+            label: "Элемент 2",
+            value: "cards",
           },
           {
-            label: 'Toy Bird',
-            value: 'bird',
+            label: "Элемент 3",
+            value: "bird",
           },
         ],
       },
@@ -38,33 +38,33 @@ const options = [
 ];
 
 const MultiCascader = () => {
-  const onChange = value => {
+  const onChange = (value) => {
     console.log(value);
   };
   return (
     <>
       <Cascader
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
         options={options}
         onChange={onChange}
         multiple
         maxTagCount="responsive"
         showCheckedStrategy={SHOW_CHILD}
         defaultValue={[
-          ['bamboo', 'little', 'fish'],
-          ['bamboo', 'little', 'cards'],
-          ['bamboo', 'little', 'bird'],
+          ["bamboo", "little", "fish"],
+          ["bamboo", "little", "cards"],
+          ["bamboo", "little", "bird"],
         ]}
       />
       <br />
       <br />
       <Cascader
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
         options={options}
         onChange={onChange}
         multiple
         maxTagCount="responsive"
-        defaultValue={[['bamboo']]}
+        defaultValue={[["bamboo"]]}
       />
     </>
   );

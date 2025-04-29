@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Radio, Space, Tabs } from 'antd';
+import React, { useState } from "react";
+import { Radio, Space, Tabs } from "antd";
 
 const TabsList = () => {
-  const [tabPosition, setTabPosition] = useState('left');
-  const changeTabPosition = e => {
+  const [tabPosition, setTabPosition] = useState("left");
+  const changeTabPosition = (e) => {
     setTabPosition(e.target.value);
   };
   return (
@@ -22,9 +22,9 @@ const TabsList = () => {
         items={Array.from({ length: 3 }).map((_, i) => {
           const id = String(i + 1);
           return {
-            label: `Tab ${id}`,
+            label: `Пункт ${id}`,
             key: id,
-            children: `Content of Tab ${id}`,
+            children: `Данные пункта ${id}`,
           };
         })}
       />

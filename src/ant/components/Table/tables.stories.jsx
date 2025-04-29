@@ -8,28 +8,28 @@ import TableWithSearch from "./tableWithSearch";
 import TableWithSort from "./tableWithSort";
 
 export default {
-  title: "Example/antd/Tables",
+  title: "antd/Tables",
   components: CommonTable,
 };
 
 const data = [
   {
     key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
+    name: "GNSS",
+    age: "DN",
+    address: "SM",
   },
   {
     key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
+    name: "GNSS",
+    age: "DN",
+    address: "SM",
   },
   {
     key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
+    name: "GNSS",
+    age: "DN",
+    address: "SM",
   },
 ];
 

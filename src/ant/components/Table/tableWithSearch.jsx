@@ -1,38 +1,38 @@
-import React, { useRef, useState } from 'react';
-import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Space, Table } from 'antd';
-import Highlighter from 'react-highlight-words';
+import React, { useRef, useState } from "react";
+import { SearchOutlined } from "@ant-design/icons";
+import { Button, Input, Space, Table } from "antd";
+import Highlighter from "react-highlight-words";
 
 const data = [
   {
-    key: '1',
-    name: 'John Brown',
+    key: "1",
+    name: "Станция GNSS",
     age: 32,
-    address: 'New York No. 1 Lake Park',
+    address: "42",
   },
   {
-    key: '2',
-    name: 'Joe Black',
+    key: "2",
+    name: "Станция GNSS",
     age: 42,
-    address: 'London No. 1 Lake Park',
+    address: "42",
   },
   {
-    key: '3',
-    name: 'Jim Green',
+    key: "3",
+    name: "Станция GNSS",
     age: 32,
-    address: 'Sydney No. 1 Lake Park',
+    address: "42",
   },
   {
-    key: '4',
-    name: 'Jim Red',
+    key: "4",
+    name: "Станция GNSS",
     age: 32,
-    address: 'London No. 2 Lake Park',
+    address: "42",
   },
 ];
 
 const TableWithSearch = () => {
-  const [searchText, setSearchText] = useState('');
-  const [searchedColumn, setSearchedColumn] = useState('');
+  const [searchText, setSearchText] = useState("");
+  const [searchedColumn, setSearchedColumn] = useState("");
   const searchInput = useRef(null);
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -41,21 +41,29 @@ const TableWithSearch = () => {
     setSearchedColumn(dataIndex);
   };
 
-  const handleReset = clearFilters => {
+  const handleReset = (clearFilters) => {
     clearFilters();
-    setSearchText('');
+    setSearchText("");
   };
 
-  const getColumnSearchProps = dataIndex => ({
-    filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters, close }) => (
-      <div style={{ padding: 8 }} onKeyDown={e => e.stopPropagation()}>
+  const getColumnSearchProps = (dataIndex) => ({
+    filterDropdown: ({
+      setSelectedKeys,
+      selectedKeys,
+      confirm,
+      clearFilters,
+      close,
+    }) => (
+      <div style={{ padding: 8 }} onKeyDown={(e) => e.stopPropagation()}>
         <Input
           ref={searchInput}
           placeholder={`Search ${dataIndex}`}
           value={selectedKeys[0]}
-          onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+          onChange={(e) =>
+            setSelectedKeys(e.target.value ? [e.target.value] : [])
+          }
           onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-          style={{ marginBottom: 8, display: 'block' }}
+          style={{ marginBottom: 8, display: "block" }}
         />
         <Space>
           <Button
@@ -65,26 +73,16 @@ const TableWithSearch = () => {
             size="small"
             style={{ width: 90 }}
           >
-            Search
+            Поиск
           </Button>
           <Button
             onClick={() => clearFilters && handleReset(clearFilters)}
             size="small"
             style={{ width: 90 }}
           >
-            Reset
+            сбросить
           </Button>
-          <Button
-            type="link"
-            size="small"
-            onClick={() => {
-              confirm({ closeDropdown: false });
-              setSearchText(selectedKeys[0]);
-              setSearchedColumn(dataIndex);
-            }}
-          >
-            Filter
-          </Button>
+
           <Button
             type="link"
             size="small"
@@ -92,12 +90,14 @@ const TableWithSearch = () => {
               close();
             }}
           >
-            close
+            закрыть
           </Button>
         </Space>
       </div>
     ),
-    filterIcon: filtered => <SearchOutlined style={{ color: filtered ? '#1677ff' : undefined }} />,
+    filterIcon: (filtered) => (
+      <SearchOutlined style={{ color: filtered ? "#1677ff" : undefined }} />
+    ),
     onFilter: (value, record) =>
       record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
     filterDropdownProps: {
@@ -105,18 +105,20 @@ const TableWithSearch = () => {
         if (open) {
           setTimeout(() => {
             var _a;
-            return (_a = searchInput.current) === null || _a === void 0 ? void 0 : _a.select();
+            return (_a = searchInput.current) === null || _a === void 0
+              ? void 0
+              : _a.select();
           }, 100);
         }
       },
     },
-    render: text =>
+    render: (text) =>
       searchedColumn === dataIndex ? (
         <Highlighter
-          highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+          highlightStyle={{ backgroundColor: "#ffc069", padding: 0 }}
           searchWords={[searchText]}
           autoEscape
-          textToHighlight={text ? text.toString() : ''}
+          textToHighlight={text ? text.toString() : ""}
         />
       ) : (
         text
@@ -125,22 +127,22 @@ const TableWithSearch = () => {
 
   const columns = [
     Object.assign(
-      { title: 'Name', dataIndex: 'name', key: 'name', width: '30%' },
-      getColumnSearchProps('name'),
+      { title: "Name", dataIndex: "name", key: "name", width: "30%" },
+      getColumnSearchProps("name")
     ),
     Object.assign(
-      { title: 'Age', dataIndex: 'age', key: 'age', width: '20%' },
-      getColumnSearchProps('age'),
+      { title: "БЛА", dataIndex: "age", key: "age", width: "20%" },
+      getColumnSearchProps("age")
     ),
     Object.assign(
       Object.assign(
-        { title: 'Address', dataIndex: 'address', key: 'address' },
-        getColumnSearchProps('address'),
+        { title: "Камеры", dataIndex: "address", key: "address" },
+        getColumnSearchProps("address")
       ),
       {
         sorter: (a, b) => a.address.length - b.address.length,
-        sortDirections: ['descend', 'ascend'],
-      },
+        sortDirections: ["descend", "ascend"],
+      }
     ),
   ];
 

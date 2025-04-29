@@ -1,8 +1,7 @@
 import InputOutline from "./InputOutline";
-import ShowPasswordIcon from "../InputPassword/assets/ShowPasswordIcon";
 
 export default {
-  title: "ECOPRO/Outlined",
+  title: "ECOPRO/Input",
   component: InputOutline,
   argTypes: {
     autoComplete: {
@@ -125,34 +124,32 @@ export default {
 const Template = (args) => <InputOutline {...args} />;
 
 export const Default = Template.bind({});
-
-export const Large = Template.bind({});
-Large.args = {
+Default.args = {
+  label: "Станция ГНСС",
   className: "size--large",
 };
 
+export const Large = Template.bind({});
+Large.args = { label: "Станция ГНСС", className: "size--large" };
+
 export const Small = Template.bind({});
-Small.args = {
-  className: "size--small",
-};
+Small.args = { label: "Станция ГНСС", className: "size--small" };
 
 export const Required = Template.bind({});
-Required.args = {
-  isRequired: true,
-};
+Required.args = { label: "Станция ГНСС", isRequired: true };
 
 export const Inactive = Template.bind({});
 Inactive.args = {
   disabled: true,
+  label: "Станция ГНСС",
   value: "Значение инпута",
 };
-
-export const Glyph = Template.bind({});
-Glyph.args = {
-  glyph: ShowPasswordIcon,
+export const NumberInput = Template.bind({});
+NumberInput.args = {
+  value: 10,
+  type: "number",
+  min: 0,
+  onChange: (e) => console.log(e.target.value),
 };
-
 export const Error = Template.bind({});
-Error.args = {
-  error: "Ошибка",
-};
+Error.args = { label: "Станция ГНСС", error: "Ошибка" };

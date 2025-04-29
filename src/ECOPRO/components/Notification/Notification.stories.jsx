@@ -9,9 +9,21 @@ export default {
 };
 
 const messages = [
-  { message: "Success message!", type: "success", notificationId: "1" },
-  { message: "Error message!", type: "error", notificationId: "2" },
-  { message: "Warning message!", type: "warning", notificationId: "3" },
+  {
+    message: "Создание полетного задания прошло успешно!",
+    type: "success",
+    notificationId: "1",
+  },
+  {
+    message: "Возникла ошибка при создании полетного задания!",
+    type: "error",
+    notificationId: "2",
+  },
+  {
+    message: "Заполните все обязательные поля!",
+    type: "warning",
+    notificationId: "3",
+  },
 ];
 
 const Template = (args) => <Notification {...args} />;

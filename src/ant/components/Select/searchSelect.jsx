@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select } from 'antd';
 
-const SearchInput = () => (
+const SearchSelect = () => (
   <Select
     showSearch
     style={{ width: 200 }}
@@ -53,4 +53,4 @@ const SearchInput = () => (
   />
 );
 
-export default SearchInput;
+export default SearchSelect;

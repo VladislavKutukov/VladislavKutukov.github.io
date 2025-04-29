@@ -2,10 +2,10 @@ import React from "react";
 import PopconfirmExample from "./popconfirm";
 
 export default {
-    title: "Example/antd/PopconfirmWindow",
-    component: PopconfirmExample,
-}
+  title: "antd/PopconfirmWindow",
+  component: PopconfirmExample,
+};
 
-const Template = (args) => <PopconfirmExample {...args}/>
+const Template = (args) => <PopconfirmExample {...args} />;
 
-export const Popconfirm = Template.bind({})
+export const Popconfirm = Template.bind({});
