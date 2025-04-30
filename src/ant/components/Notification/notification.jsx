@@ -4,60 +4,62 @@ import {
   RadiusBottomrightOutlined,
   RadiusUpleftOutlined,
   RadiusUprightOutlined,
-} from "@ant-design/icons";
-import { Button, Divider, notification, Space } from "antd";
-const Context = React.createContext({ name: "Default" });
+} from '@ant-design/icons';
+import { Button, Divider, notification, Space } from 'antd';
 
-const Notifications = () => {
+const Context = React.createContext({ name: 'Default' });
+
+const Уведомления = () => {
   const [api, contextHolder] = notification.useNotification();
-  const openNotification = (placement) => {
+
+  const открытьУведомление = (placement) => {
     api.info({
-      message: `Сообщение`,
-      description: (
-        <Context.Consumer>{({ name }) => `Уведомление`}</Context.Consumer>
-      ),
+      message: `Уведомление`,
+      description: <Context.Consumer>{() => `Ваша заявка успешно сформирована в системе!`}</Context.Consumer>,
       placement,
     });
   };
-  const contextValue = useMemo(() => ({ name: "Ant Design" }), []);
+
+  const contextValue = useMemo(() => ({ name: 'Ant Design' }), []);
+
   return (
     <Context.Provider value={contextValue}>
       {contextHolder}
       <Space>
         <Button
           type="primary"
-          onClick={() => openNotification("topLeft")}
+          onClick={() => открытьУведомление('topLeft')}
           icon={<RadiusUpleftOutlined />}
         >
-          topLeft
+          Сверху слева
         </Button>
         <Button
           type="primary"
-          onClick={() => openNotification("topRight")}
+          onClick={() => открытьУведомление('topRight')}
           icon={<RadiusUprightOutlined />}
         >
-          topRight
+          Сверху справа
         </Button>
       </Space>
       <Divider />
       <Space>
         <Button
           type="primary"
-          onClick={() => openNotification("bottomLeft")}
+          onClick={() => открытьУведомление('bottomLeft')}
           icon={<RadiusBottomleftOutlined />}
         >
-          bottomLeft
+          Снизу слева
         </Button>
         <Button
           type="primary"
-          onClick={() => openNotification("bottomRight")}
+          onClick={() => открытьУведомление('bottomRight')}
           icon={<RadiusBottomrightOutlined />}
         >
-          bottomRight
+          Снизу справа
         </Button>
       </Space>
     </Context.Provider>
   );
 };
 
-export default Notifications;
+export default Уведомления;

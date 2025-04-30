@@ -1,11 +1,11 @@
 import Table from "./table";
 
 export default {
-    title: "MUI/Table",
+    title: "MUI/Таблица",
     component: Table,
 }
 
-const Common = (args) =>  <Table {...args}/>
+const Common = (args) => <Table {...args} />
 
-export const TableExample = Common.bind({})
+export const ПримерТаблицы = Common.bind({})
 

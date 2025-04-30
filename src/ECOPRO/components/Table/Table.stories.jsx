@@ -3,7 +3,7 @@ import React from "react";
 import Table from "./Table";
 
 export default {
-  title: "ECOPRO/Table",
+  title: "ECOPRO/Таблица",
   component: Table,
 };
 
@@ -129,20 +129,19 @@ const defaultData = [
 
 const Template = (args) => <Table {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Поумолчанию = Template.bind({});
+Поумолчанию.args = {
   header: defaultHeader,
   data: defaultData,
   primaryKey: "id",
   orderedColumn: "+id",
 };
 
-export const EmptyData = Template.bind({});
-EmptyData.args = {
+export const ПустыеДанные = Template.bind({});
+ПустыеДанные.args = {
   header: defaultHeader,
   data: [], // Пустые данные
   primaryKey: "id",
   orderedColumn: "+id",
-
   hideHeader: false,
 };

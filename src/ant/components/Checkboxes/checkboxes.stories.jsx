@@ -3,12 +3,12 @@ import CheckboxTypes from "./checkboxes";
 import RelatedChackboxes from "./relatedCheckboxes";
 
 export default {
-  title: "antd/Checkbox",
+  title: "antd/Флажки",
   component: CheckboxTypes,
 };
 
 const TypesCheckboxes = (args) => <CheckboxTypes {...args} />;
 const RelatedChackboxs = (args) => <RelatedChackboxes {...args} />;
 
-export const Common = TypesCheckboxes.bind({});
-export const Related = RelatedChackboxs.bind({});
+export const СтандартныеФлажки = TypesCheckboxes.bind({});
+export const СвязанныеФлажки = RelatedChackboxs.bind({});

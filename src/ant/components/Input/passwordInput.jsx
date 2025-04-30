@@ -7,31 +7,36 @@ const PasswordInput = (style) => {
   return (
     <div style={style}>
       <Space direction="vertical">
-        <Input.Password placeholder="input password" />
+        <Input.Password placeholder="Введите пароль" />
         <Input.Password
-          placeholder="input password"
-          iconRender={(visible) =>
-            visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-          }
+          placeholder="Введите пароль"
+          iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
         />
         <Space direction="horizontal">
           <Input.Password
-            placeholder="input password"
-            visibilityToggle={{
-              visible: passwordVisible,
-              onVisibleChange: setPasswordVisible,
-            }}
+            placeholder="Введите пароль"
+            visibilityToggle={{ visible: passwordVisible, onVisibleChange: setPasswordVisible }}
           />
-          <Button
-            style={{ width: 80 }}
-            onClick={() => setPasswordVisible((prevState) => !prevState)}
-          >
-            {passwordVisible ? "Скрыть" : "Показывать"}
-          </Button>
+          <Space direction="horizontal">
+            <Input.Password
+              placeholder="input password"
+              visibilityToggle={{
+                visible: passwordVisible,
+                onVisibleChange: setPasswordVisible,
+              }}
+            />
+            <Button
+              style={{ width: 80 }}
+              onClick={() => setPasswordVisible((prevState) => !prevState)}
+            >
+              {passwordVisible ? "Скрыть" : "Показывать"}
+            </Button>
+          </Space>
+          <Input.Password disabled placeholder="disabled input password" />
         </Space>
-        <Input.Password disabled placeholder="disabled input password" />
-      </Space>
-    </div>
+        <Input.Password disabled placeholder="(Недоступно) Введите пароль" />
+      </Space >
+    </div >
   );
 };
 

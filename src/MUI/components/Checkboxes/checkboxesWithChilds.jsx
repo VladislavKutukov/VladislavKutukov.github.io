@@ -21,11 +21,11 @@ export default function IndeterminateCheckbox() {
   const children = (
     <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
       <FormControlLabel
-        label="Child 1"
+        label="Доступно ТС"
         control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
       />
       <FormControlLabel
-        label="Child 2"
+        label="Доступен водитель"
         control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
       />
     </Box>
@@ -34,7 +34,7 @@ export default function IndeterminateCheckbox() {
   return (
     <div>
       <FormControlLabel
-        label="Parent"
+        label="Возможность создать"
         control={
           <Checkbox
             checked={checked[0] && checked[1]}

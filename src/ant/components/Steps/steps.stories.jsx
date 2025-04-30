@@ -4,7 +4,7 @@ import StepsWithButtonNavigation from "./stepsWithButtonnavigation";
 import DotStyleSteps from "./dotStyleSteps";
 
 export default {
-  title: "antd/Steps",
+  title: "antd/Этапы",
   component: CommonSteps,
 };
 
@@ -12,9 +12,9 @@ const CommonStep = (args) => <CommonSteps {...args} />;
 const ButtonNavigationSteps = (args) => <StepsWithButtonNavigation {...args} />;
 const DotStyleStep = (args) => <DotStyleSteps {...args} />;
 
-export const Common = CommonStep.bind({});
-export const ButtonNavigation = ButtonNavigationSteps.bind({});
-export const DotStyle = DotStyleStep.bind({});
+export const Стандартные = CommonStep.bind({});
+export const ЭтапыСПереключениемКнопками = ButtonNavigationSteps.bind({});
+export const ЭтапыСтилизованныеПодТочки = DotStyleStep.bind({});
 
 const CommonArgs = {
   border: "1px solid #f0f0f0",
@@ -22,6 +22,6 @@ const CommonArgs = {
   padding: "20px",
 };
 
-Common.args = CommonArgs;
-ButtonNavigation.args = CommonArgs;
-DotStyle.args = CommonArgs;
+Стандартные.args = CommonArgs;
+ЭтапыСПереключениемКнопками.args = CommonArgs;
+ЭтапыСтилизованныеПодТочки.args = CommonArgs;

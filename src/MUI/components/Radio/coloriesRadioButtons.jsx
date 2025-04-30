@@ -13,8 +13,8 @@ export default function ColorRadioButtons() {
     checked: selectedValue === item,
     onChange: handleChange,
     value: item,
-    name: 'color-radio-button-demo',
-    inputProps: { 'aria-label': item },
+    name: 'цветные-радиокнопки',
+    inputProps: { 'aria-label': `Вариант ${item}` },
   });
 
   return (

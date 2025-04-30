@@ -3,7 +3,7 @@ import ClickDropdown from "./clickDropdown";
 import HoverDropdown from "./hoverDropdowns";
 
 export default {
-  title: "antd/Dropdowns",
+  title: "antd/Выпадающий Список",
   component: {
     ClickDropdown,
     HoverDropdown,
@@ -17,4 +17,4 @@ const Template = (args) => (
   </>
 );
 
-export const DropdownExamples = Template.bind({});
+export const ВариантыВыпадающихСписков = Template.bind({});

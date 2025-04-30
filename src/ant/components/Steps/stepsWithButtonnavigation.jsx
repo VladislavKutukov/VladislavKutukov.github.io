@@ -4,15 +4,15 @@ import { Button, message, Steps, theme } from "antd";
 const steps = [
   {
     title: "Первый пункт",
-    content: "First-content",
+    content: "Контент первого пункта",
   },
   {
     title: "Второй пункт",
-    content: "Second-content",
+    content: "Контент второго пункта",
   },
   {
     title: "Третий пункт",
-    content: "Last-content",
+    content: "Контент третьего пункта",
   },
 ];
 

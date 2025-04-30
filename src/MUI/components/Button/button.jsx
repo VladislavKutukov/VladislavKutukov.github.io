@@ -6,30 +6,30 @@ export default function BasicButtons() {
   return (
     <Box sx={{ '& button': { m: 1 } }}>
       <div>
-        <Button size="small">Small</Button>
-        <Button size="medium">Medium</Button>
-        <Button size="large">Large</Button>
+        <Button size="small">Маленькая</Button>
+        <Button size="medium">Средняя</Button>
+        <Button size="large">Большая</Button>
       </div>
       <div>
         <Button variant="outlined" size="small">
-          Small
+          Маленькая
         </Button>
         <Button variant="outlined" size="medium">
-          Medium
+          Средняя
         </Button>
         <Button variant="outlined" size="large">
-          Large
+          Большая
         </Button>
       </div>
       <div>
         <Button variant="contained" size="small">
-          Small
+          Маленькая
         </Button>
         <Button variant="contained" size="medium">
-          Medium
+          Средняя
         </Button>
         <Button variant="contained" size="large">
-          Large
+          Большая
         </Button>
       </div>
     </Box>

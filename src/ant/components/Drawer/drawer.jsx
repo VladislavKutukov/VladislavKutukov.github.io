@@ -17,10 +17,10 @@ const DrawerForm = () => {
     <>
       <Space>
         <Radio.Group value={placement} onChange={onChange}>
-          <Radio value="top">top</Radio>
-          <Radio value="right">right</Radio>
-          <Radio value="bottom">bottom</Radio>
-          <Radio value="left">left</Radio>
+          <Radio value="top">верх</Radio>
+          <Radio value="right">право</Radio>
+          <Radio value="bottom">низ</Radio>
+          <Radio value="left">лево</Radio>
         </Radio.Group>
         <Button type="primary" onClick={showDrawer}>
           Открыть

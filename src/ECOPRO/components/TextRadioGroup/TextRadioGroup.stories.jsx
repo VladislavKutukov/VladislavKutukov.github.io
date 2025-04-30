@@ -4,20 +4,17 @@ import React, { useState } from "react";
 
 import TextRadioGroup from "./TextRadioGroup";
 
-// Определение метаданных для компонента
 export default {
-  title: "ECOPRO/TextRadioGroup",
+  title: "ECOPRO/Взаимосвязанные Переключатели",
   component: TextRadioGroup,
 };
 
-// Определение примера данных для элементов
 const items = [
   { value: "option1", label: "Option 1" },
   { value: "option2", label: "Option 2" },
   { value: "option3", label: "Option 3" },
 ];
 
-// Настройка основного варианта с использованием состояния
 const Template = (args) => {
   const [selectedItem, setSelectedItem] = useState();
 
@@ -35,33 +32,30 @@ const Template = (args) => {
   );
 };
 
-// История для стандартного состояния
-export const Default = Template.bind({});
-Default.args = {
+export const Поумолчанию = Template.bind({});
+Поумолчанию.args = {
   items: items,
-  selectedItem: items[0], // Первый элемент выбран по умолчанию
+  selectedItem: items[0],
   groupName: "exampleGroup",
-  className: "custom-class", // Если нужно, добавьте свой класс для стилизации
+  className: "custom-class",
 };
 
-// История для случая без выбранного элемента
-export const NoSelection = Template.bind({});
-NoSelection.args = {
+export const БезВыбора = Template.bind({});
+БезВыбора.args = {
   items: items,
   selectedItem: undefined,
   groupName: "exampleGroup",
 };
 
-// История для большего количества элементов
-export const WithMoreItems = Template.bind({});
-WithMoreItems.args = {
+export const СДополнительнымиПунктами = Template.bind({});
+СДополнительнымиПунктами.args = {
   items: [
-    { value: "option1", label: "Option 1" },
-    { value: "option2", label: "Option 2" },
-    { value: "option3", label: "Option 3" },
-    { value: "option4", label: "Option 4" },
-    { value: "option5", label: "Option 5" },
+    { value: "option1", label: "Вариант 1" },
+    { value: "option2", label: "Вариант 2" },
+    { value: "option3", label: "Вариант 3" },
+    { value: "option4", label: "Вариант 4" },
+    { value: "option5", label: "Вариант 5" },
   ],
-  selectedItem: { value: "option3", label: "Option 3" }, // Третий элемент выбран по умолчанию
+  selectedItem: { value: "option3", label: "Вариант 3" },
   groupName: "exampleGroup",
 };

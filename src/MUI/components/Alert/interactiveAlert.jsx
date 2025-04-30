@@ -15,7 +15,7 @@ export default function TransitionAlerts() {
         <Alert
           action={
             <IconButton
-              aria-label="close"
+              aria-label="закрыть"
               color="inherit"
               size="small"
               onClick={() => {
@@ -27,7 +27,7 @@ export default function TransitionAlerts() {
           }
           sx={{ mb: 2 }}
         >
-          Click the close icon to see the Collapse transition in action!
+          Нажмите на иконку закрытия!
         </Alert>
       </Collapse>
       <Button
@@ -37,7 +37,7 @@ export default function TransitionAlerts() {
           setOpen(true);
         }}
       >
-        Re-open
+        Показать снова
       </Button>
     </Box>
   );

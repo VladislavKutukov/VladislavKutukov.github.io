@@ -6,7 +6,7 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+const steps = ['Выбор настроек кампании', 'Создание группы объявлений', 'Создание объявления'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -37,9 +37,7 @@ export default function HorizontalLinearStepper() {
 
   const handleSkip = () => {
     if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
+      throw new Error("Нельзя пропустить обязательный шаг.");
     }
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -62,7 +60,7 @@ export default function HorizontalLinearStepper() {
           const labelProps = {};
           if (isStepOptional(index)) {
             labelProps.optional = (
-              <Typography variant="caption">Optional</Typography>
+              <Typography variant="caption">Опционально</Typography>
             );
           }
           if (isStepSkipped(index)) {
@@ -78,16 +76,16 @@ export default function HorizontalLinearStepper() {
       {activeStep === steps.length ? (
         <React.Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
+            Все шаги завершены - вы закончили
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset}>Reset</Button>
+            <Button onClick={handleReset}>Сбросить</Button>
           </Box>
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          <Typography sx={{ mt: 2, mb: 1 }}>Шаг {activeStep + 1}</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"
@@ -95,16 +93,16 @@ export default function HorizontalLinearStepper() {
               onClick={handleBack}
               sx={{ mr: 1 }}
             >
-              Back
+              Назад
             </Button>
             <Box sx={{ flex: '1 1 auto' }} />
             {isStepOptional(activeStep) && (
               <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                Skip
+                Пропустить
               </Button>
             )}
             <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+              {activeStep === steps.length - 1 ? 'Завершить' : 'Далее'}
             </Button>
           </Box>
         </React.Fragment>

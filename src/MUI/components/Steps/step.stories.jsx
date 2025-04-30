@@ -1,11 +1,10 @@
 import LinearStepper from "./step";
 
 export default {
-    title: "MUI/Step",
+    title: "MUI/Этапы",
     component: LinearStepper,
 }
 
-const Linear = (args) => <LinearStepper {...args}/>
+const Линейный = (args) => <LinearStepper {...args} />
 
-export const LinearSteps = Linear.bind({})
-
+export const ЛинейныеШаги = Линейный.bind({})

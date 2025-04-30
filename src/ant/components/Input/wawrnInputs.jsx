@@ -5,10 +5,10 @@ import { Input, Space } from 'antd';
 const WarnInputs = (style) => (
   <div style={style}>
     <Space direction="vertical" style={{ width: '100%' }}>
-    <Input status="error" placeholder="Error" />
-    <Input status="warning" placeholder="Warning" />
-    <Input status="error" prefix={<ClockCircleOutlined />} placeholder="Error with prefix" />
-    <Input status="warning" prefix={<ClockCircleOutlined />} placeholder="Warning with prefix" />
+    <Input status="error" placeholder="Ошибка" />
+    <Input status="warning" placeholder="Предупреждение" />
+    <Input status="error" prefix={<ClockCircleOutlined />} placeholder="Ошибка с префиксом" />
+    <Input status="warning" prefix={<ClockCircleOutlined />} placeholder="Предупреждение с префиксом" />
   </Space>
   </div>
   

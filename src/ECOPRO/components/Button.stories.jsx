@@ -2,27 +2,27 @@ import { Button } from "./Button";
 import { ButtonVariant } from "./Button.type";
 
 export default {
-  title: "ECOPRO/Button",
+  title: "ECOPRO/Обычные Кнопки",
   component: Button,
 };
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Основная = Template.bind({});
+Основная.args = {
   children: "Добавить",
   variant: ButtonVariant.PRIMARY,
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
+export const Отключенная = Template.bind({});
+Отключенная.args = {
   children: "Добавить",
   disabled: true,
   variant: ButtonVariant.PRIMARY,
 };
 
-export const Active = Template.bind({});
-Active.args = {
+export const Активная = Template.bind({});
+Активная.args = {
   children: "Добавить",
   isActive: true,
   variant: ButtonVariant.PRIMARY,

@@ -5,7 +5,7 @@ import AntDatePicker from "./AntDatePicker";
 import moment from "moment";
 
 export default {
-  title: "antd/AntDatePicker",
+  title: "antd/Строка Выбора Даты",
   component: AntDatePicker,
   argTypes: {},
 };
@@ -21,41 +21,41 @@ const Template = (args) => {
   );
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const ОбычноеПолеВыбораДаты = Template.bind({});
+ОбычноеПолеВыбораДаты.args = {
   placeholder: "Выберите дату",
 };
 
-export const NeedConfirm = Template.bind({});
-NeedConfirm.args = {
+export const ПолеВыбораДатыСПодтверждением = Template.bind({});
+ПолеВыбораДатыСПодтверждением.args = {
   needConfirm: true,
 };
 
-export const DateTimePickerSizeLarge = Template.bind({});
-DateTimePickerSizeLarge.args = {
+export const УвеличенноеПолеВыбораДаты = Template.bind({});
+УвеличенноеПолеВыбораДаты.args = {
   showTime: true,
   size: "large",
 };
 
-export const DateTimePicker = Template.bind({});
-DateTimePicker.args = {
+export const СтандартноеПолеВыбораДатыИВремени = Template.bind({});
+СтандартноеПолеВыбораДатыИВремени.args = {
   showTime: true,
 };
 
-export const DateTimePickerSizeSmall = Template.bind({});
-DateTimePickerSizeSmall.args = {
+export const УменьшенноеПолеВыбораДаты = Template.bind({});
+УменьшенноеПолеВыбораДаты.args = {
   showTime: true,
   size: "small",
 };
 
-export const DateTimePickerDisabled = Template.bind({});
-DateTimePickerDisabled.args = {
+export const НедоступноеПолеВыбораДаты = Template.bind({});
+НедоступноеПолеВыбораДаты.args = {
   showTime: true,
   disabled: true,
 };
 
-export const DateTimePickerReadonly = Template.bind({});
-DateTimePickerReadonly.args = {
+export const ПолеВыбораДатыТолькоПросмотр = Template.bind({});
+ПолеВыбораДатыТолькоПросмотр.args = {
   showTime: true,
   inputReadOnly: true,
   defaultValue: moment(),
@@ -63,8 +63,8 @@ DateTimePickerReadonly.args = {
   allowClear: false,
 };
 
-export const DateTimePickerStyled = Template.bind({});
-DateTimePickerStyled.args = {
+export const ПолеВыбораДатыСИзмененнымСтилем = Template.bind({});
+ПолеВыбораДатыСИзмененнымСтилем.args = {
   defaultValue: moment(),
   showTime: true,
   style: { color: "#FF0000" },

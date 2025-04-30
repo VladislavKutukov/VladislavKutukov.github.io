@@ -7,122 +7,122 @@ const TestButton = () => {
       <Flex vertical gap="small">
         <Flex gap="small" wrap>
           <Button color="default" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="default" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="default" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="default" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="default" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="default" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
         <Flex gap="small" wrap>
           <Button color="primary" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="primary" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="primary" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="primary" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="primary" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="primary" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
         <Flex gap="small" wrap>
           <Button color="danger" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="danger" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="danger" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="danger" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="danger" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="danger" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
         <Flex gap="small" wrap>
           <Button color="pink" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="pink" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="pink" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="pink" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="pink" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="pink" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
         <Flex gap="small" wrap>
           <Button color="purple" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="purple" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="purple" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="purple" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="purple" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="purple" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
         <Flex gap="small" wrap>
           <Button color="cyan" variant="solid">
-            Solid
+            Сплошной
           </Button>
           <Button color="cyan" variant="outlined">
-            Outlined
+            Очерченный
           </Button>
           <Button color="cyan" variant="dashed">
-            Dashed
+            Пунктирный
           </Button>
           <Button color="cyan" variant="filled">
-            Filled
+            Полный
           </Button>
           <Button color="cyan" variant="text">
-            Text
+            Текст
           </Button>
           <Button color="cyan" variant="link">
-            Link
+            Ссылка
           </Button>
         </Flex>
       </Flex>

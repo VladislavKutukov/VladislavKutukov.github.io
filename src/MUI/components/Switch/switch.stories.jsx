@@ -1,10 +1,10 @@
 import SwitchLabels from "./switch";
 
 export default {
-    title: "MUI/Switch",
+    title: "MUI/Переключатель",
     component: SwitchLabels,
 }
 
-const Switches = (args) => <SwitchLabels {...args}/>
+const Switches = (args) => <SwitchLabels {...args} />
 
-export const SwitchLable = Switches.bind({})
+export const ПереключательСМеткой = Switches.bind({})

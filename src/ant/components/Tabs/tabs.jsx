@@ -9,12 +9,12 @@ const TabsList = () => {
   return (
     <>
       <Space style={{ marginBottom: 24 }}>
-        Tab position:
+        Выбор расположения вкладок:
         <Radio.Group value={tabPosition} onChange={changeTabPosition}>
-          <Radio.Button value="top">top</Radio.Button>
-          <Radio.Button value="bottom">bottom</Radio.Button>
-          <Radio.Button value="left">left</Radio.Button>
-          <Radio.Button value="right">right</Radio.Button>
+          <Radio.Button value="top">Верх</Radio.Button>
+          <Radio.Button value="bottom">Низ</Radio.Button>
+          <Radio.Button value="left">Лево</Radio.Button>
+          <Radio.Button value="right">Право</Radio.Button>
         </Radio.Group>
       </Space>
       <Tabs

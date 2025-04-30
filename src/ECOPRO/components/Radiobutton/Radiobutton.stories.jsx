@@ -1,11 +1,11 @@
 import Radiobutton from "./Radiobutton";
 
 export default {
-  title: "ECOPRO/Radiobutton",
+  title: "ECOPRO/Радиокнопка",
   component: Radiobutton,
   argTypes: {
     className: {
-      description: "Имя класса. Для задания дополнительных стилей",
+      description: "Имя класса для дополнительных стилей",
       defaultValue: "",
       table: {
         type: { summary: "string" },
@@ -14,7 +14,7 @@ export default {
       control: { type: "text" },
     },
     disabled: {
-      description: "Блокировка инпута",
+      description: "Блокировка элемента",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -23,7 +23,7 @@ export default {
       control: { type: "boolean" },
     },
     name: {
-      description: "Имя",
+      description: "Имя группы радиокнопок",
       defaultValue: "inputName",
       table: {
         type: { summary: "string" },
@@ -32,7 +32,7 @@ export default {
       control: { type: "text" },
     },
     onChange: {
-      description: "Обработка события клика",
+      description: "Обработчик изменения состояния",
       defaultValue: null,
       table: {
         type: { summary: "function" },
@@ -40,7 +40,7 @@ export default {
       },
     },
     checked: {
-      description: "Состояние инпута",
+      description: "Состояние выбора",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -49,7 +49,7 @@ export default {
       control: { type: "boolean" },
     },
     label: {
-      description: "Подпись к инпуту",
+      description: "Текст метки",
       defaultValue: "",
       table: {
         type: { summary: "string" },
@@ -62,23 +62,23 @@ export default {
 
 const Template = (args) => <Radiobutton {...args} />;
 
-export const Default = Template.bind({});
+export const Стандартная = Template.bind({});
 
-export const CheckedWithLabel = Template.bind({});
-CheckedWithLabel.args = {
+export const ВыбраннаяСМеткой = Template.bind({});
+ВыбраннаяСМеткой.args = {
   checked: true,
   name: "input1",
   label: "Включить",
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
+export const Отключенная = Template.bind({});
+Отключенная.args = {
   disabled: true,
   name: "input2",
 };
 
-export const DisabledAndCheckedWithLabel = Template.bind({});
-DisabledAndCheckedWithLabel.args = {
+export const ОтключеннаяИВыбранная = Template.bind({});
+ОтключеннаяИВыбранная.args = {
   disabled: true,
   checked: true,
   name: "input3",

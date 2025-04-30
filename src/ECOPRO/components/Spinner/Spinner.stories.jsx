@@ -2,13 +2,13 @@ import React from "react";
 import Spinner from "./Spinner";
 
 export default {
-  title: "ECOPRO/Spinner",
+  title: "ECOPRO/Колесо загрузки",
   component: Spinner,
 };
 
 const Template = (args) => <Spinner {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const ПримерКолесаЗагрузки = Template.bind({});
+ПримерКолесаЗагрузки.args = {
   className: "",
 };

@@ -1,7 +1,7 @@
 import Checkbox from "./Checkbox";
 
 export default {
-  title: "ECOPRO/Checkbox",
+  title: "ECOPRO/Флажки",
   component: Checkbox,
   argTypes: {
     className: {
@@ -71,29 +71,31 @@ export default {
 
 const Template = (args) => <Checkbox {...args} />;
 
-export const Default = Template.bind({});
+export const ПоУмолчанию = Template.bind({});
 
-export const CheckedWithLabel = Template.bind({});
-CheckedWithLabel.args = {
+export const СМеткой = Template.bind({});
+СМеткой.args = {
   checked: true,
   name: "input1",
   label: "Обновить",
 };
-export const CheckedWithLineType = Template.bind({});
-CheckedWithLineType.args = {
+
+export const СЛинией = Template.bind({});
+СЛинией.args = {
   checked: true,
   name: "input2",
   label: "Обновить",
   markType: "line",
 };
-export const Disabled = Template.bind({});
-Disabled.args = {
+
+export const Отключенный = Template.bind({});
+Отключенный.args = {
   disabled: true,
   name: "input3",
 };
 
-export const DisabledAndCheckedWithLabel = Template.bind({});
-DisabledAndCheckedWithLabel.args = {
+export const ОтключенныйСМеткой = Template.bind({});
+ОтключенныйСМеткой.args = {
   disabled: true,
   checked: true,
   name: "input4",

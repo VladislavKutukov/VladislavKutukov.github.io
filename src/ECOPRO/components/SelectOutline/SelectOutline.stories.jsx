@@ -32,11 +32,11 @@ const data = [
 ];
 
 export default {
-  title: "ECOPRO/Select",
+  title: "ECOPRO/Выпадающий список",
   component: SelectOutline,
   argTypes: {
     className: {
-      description: "Имя класса. Для задания дополнительных стилей",
+      description: "Дополнительные классы для стилизации",
       defaultValue: "",
       table: {
         type: { summary: "string" },
@@ -45,7 +45,7 @@ export default {
       control: { type: "text" },
     },
     disabled: {
-      description: "Блокировка селектора.",
+      description: "Отключенное состояние",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -54,7 +54,7 @@ export default {
       control: { type: "boolean" },
     },
     error: {
-      description: "Ошибка",
+      description: "Текст ошибки",
       defaultValue: "",
       table: {
         type: { summary: "string" },
@@ -63,7 +63,7 @@ export default {
       control: { type: "text" },
     },
     isLoading: {
-      description: "Загрузка",
+      description: "Состояние загрузки",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -72,7 +72,7 @@ export default {
       control: { type: "boolean" },
     },
     isRequired: {
-      description: 'Флаг "обязательное поле"',
+      description: "Обязательное поле",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -81,8 +81,8 @@ export default {
       control: { type: "boolean" },
     },
     label: {
-      description: "Лейбл",
-      defaultValue: "Label",
+      description: "Текст подписи",
+      defaultValue: "Подпись",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -90,15 +90,15 @@ export default {
       control: { type: "text" },
     },
     handleSelect: {
-      description: "Контроллер селектора",
-      defaultValue: () => {},
+      description: "Обработчик выбора",
+      defaultValue: () => { },
       table: {
         type: { summary: "function" },
         defaultValue: { summary: null },
       },
     },
     options: {
-      description: "Массив опций",
+      description: "Список вариантов",
       defaultValue: data.slice(0, 3),
       table: {
         type: { summary: "array" },
@@ -107,7 +107,7 @@ export default {
     },
     selectedOption: {
       name: "selectedOption",
-      description: "Текущее значение",
+      description: "Выбранный вариант",
       defaultValue: null,
       table: {
         type: { summary: "object" },
@@ -115,7 +115,7 @@ export default {
       },
     },
     placeholder: {
-      description: "Плейсхолдер",
+      description: "Текст плейсхолдера",
       defaultValue: "Выберите...",
       table: {
         type: { summary: "string" },
@@ -128,64 +128,65 @@ export default {
 
 const Template = (args) => <SelectOutline {...args} />;
 
-export const Default = Template.bind({});
-Default.args = { options: data, handleSelect: () => {} };
+export const Стандартный = Template.bind({});
+Стандартный.args = { options: data, handleSelect: () => { } };
 
-export const Small = Template.bind({});
-Small.args = {
+export const Компактный = Template.bind({});
+Компактный.args = {
   options: data,
   className: "size--small",
-  handleSelect: () => {},
+  handleSelect: () => { },
 };
 
-export const Scrollable = Template.bind({});
-Scrollable.args = {
+export const Большой = Template.bind({});
+Большой.args = {
   options: data,
-  handleSelect: () => {},
+  className: "size--large",
+  handleSelect: () => { },
 };
 
-export const Selected = Template.bind({});
-Selected.args = {
+export const СВыбранным = Template.bind({});
+СВыбранным.args = {
   options: data,
   selectedOption: {
     value: 1,
-    displayValue: "Item1",
+    displayValue: "Элемент1",
   },
-  handleSelect: () => {},
+  handleSelect: () => { },
 };
 
-export const Required = Template.bind({});
-Required.args = {
+export const Обязательный = Template.bind({});
+Обязательный.args = {
   options: data,
   isRequired: true,
   label: "Поле",
-  handleSelect: () => {},
+  handleSelect: () => { },
 };
 
-export const Inactive = Template.bind({});
-Inactive.args = {
+export const Неактивный = Template.bind({});
+Неактивный.args = {
   options: data,
   selectedOption: {
     value: 1,
-    displayValue: "Item1",
+    displayValue: "Элемент1",
   },
   disabled: true,
-  handleSelect: () => {},
+  handleSelect: () => { },
 };
 
-export const NoLabel = Template.bind({});
-NoLabel.args = { options: data, label: "", handleSelect: () => {} };
+export const БезПодписи = Template.bind({});
+БезПодписи.args = { options: data, label: "", handleSelect: () => { } };
 
-export const Loading = Template.bind({});
-Loading.args = {
+export const Загрузка = Template.bind({});
+Загрузка.args = {
   isLoading: true,
   options: data,
-  handleSelect: () => {},
+  handleSelect: () => { },
 };
 
-export const Error = Template.bind({});
-Error.args = {
+export const СОшибкой = Template.bind({});
+СОшибкой.args = {
   options: data,
   error: "Обязательное поле",
-  handleSelect: () => {},
+  handleSelect: () => { },
 };

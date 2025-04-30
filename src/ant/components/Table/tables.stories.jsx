@@ -8,7 +8,7 @@ import TableWithSearch from "./tableWithSearch";
 import TableWithSort from "./tableWithSort";
 
 export default {
-  title: "antd/Tables",
+  title: "antd/Таблицы",
   components: CommonTable,
 };
 
@@ -40,18 +40,18 @@ const WithPagination = (args) => <TableWithPagination {...args} />;
 const WithSearch = (args) => <TableWithSearch {...args} />;
 const WithSort = (args) => <TableWithSort {...args} />;
 
-export const Common = Basic.bind({});
-export const DraggableTable = WithDraggableRow.bind({});
-export const FilterTable = WithFilter.bind({});
-export const PaginationTable = WithPagination.bind({});
-export const SearchTable = WithSearch.bind({});
-export const SortTable = WithSort.bind({});
+export const Стандартная = Basic.bind({});
+export const ТаблицаСПеремещяемымиСтроками = WithDraggableRow.bind({});
+export const ТаблицаСФильтрацией = WithFilter.bind({});
+export const ТаблицаСПагинацией = WithPagination.bind({});
+export const ТаблицаСПоиском = WithSearch.bind({});
+export const ТаблицаССортировкой = WithSort.bind({});
 
 const CommonArgs = { data };
 
-Common.args = CommonArgs;
-DraggableTable.args = CommonArgs;
-FilterTable.args = CommonArgs;
-PaginationTable.args = CommonArgs;
-SearchTable.args = CommonArgs;
-SortTable.args = CommonArgs;
+Стандартная.args = CommonArgs;
+ТаблицаСПеремещяемымиСтроками.args = CommonArgs;
+ТаблицаСФильтрацией.args = CommonArgs;
+ТаблицаСПагинацией.args = CommonArgs;
+ТаблицаСПоиском.args = CommonArgs;
+ТаблицаССортировкой.args = CommonArgs;

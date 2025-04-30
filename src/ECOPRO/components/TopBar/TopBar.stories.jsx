@@ -6,16 +6,15 @@ import Button from "../Button";
 import NavigationLinks from "../NavigationLinks";
 
 export default {
-  title: "ECOPRO/TopBar",
+  title: "ECOPRO/Шапка Страницы",
   component: TopBar,
 };
 
 const Template = (args) => <TopBar {...args} />;
 
-// Основная история с кнопкой меню и логотипом
-export const Default = Template.bind({});
-Default.args = {
-  onToggleMenu: () => alert("Menu toggled!"),
+export const Поумолчанию = Template.bind({});
+Поумолчанию.args = {
+  onToggleMenu: () => alert("Меню переключено!"),
   LogoComponent: <div style={{ fontWeight: "bold" }}>Логотип</div>,
   RightSideRenderFn: () => <Button>Поиск</Button>,
   children: (
@@ -29,9 +28,8 @@ Default.args = {
   ),
 };
 
-// История без кнопки меню
-export const WithoutMenuButton = Template.bind({});
-WithoutMenuButton.args = {
+export const БезКнопкиМеню = Template.bind({});
+БезКнопкиМеню.args = {
   LogoComponent: <div style={{ fontWeight: "bold" }}>Логотип</div>,
   RightSideRenderFn: () => <Button>Поиск</Button>,
   children: (

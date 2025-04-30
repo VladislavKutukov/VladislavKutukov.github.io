@@ -2,10 +2,10 @@ import React from "react";
 import RadioButton from "./radioButton";
 
 export default {
-  title: "antd/Radio",
+  title: "antd/Радиокнопка",
   component: RadioButton,
 };
 
 const RadioTypes = (args) => <RadioButton {...args} />;
 
-export const RadioButtons = RadioTypes.bind({});
+export const ПереключателиРазныхСтилей = RadioTypes.bind({});

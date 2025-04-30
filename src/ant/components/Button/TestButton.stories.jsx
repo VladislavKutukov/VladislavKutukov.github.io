@@ -2,11 +2,11 @@ import React from "react";
 import TestButton from "./TestButton";
 
 export default {
-  title: "antd/VariantButton",
+  title: "antd/Кнопки",
   component: TestButton,
 };
 
 const Template = () => <TestButton />;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const СтилизованныеКнопки = Template.bind({});
+СтилизованныеКнопки.args = {};

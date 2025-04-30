@@ -3,14 +3,14 @@
 import ButtonWithIcon from "./ButtonWithIcon";
 
 export default {
-  title: "ECOPRO/ButtonWithIcon",
+  title: "ECOPRO/Кнопки с Значками",
   component: ButtonWithIcon,
 };
 
 const Template = (args) => <ButtonWithIcon {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const ОбычнаяКнопка = Template.bind({});
+ОбычнаяКнопка.args = {
   glyphNameLeft: "arrow-left",
   glyphNameRight: "arrow-right",
   children: "Добавить",
@@ -19,23 +19,23 @@ Default.args = {
   onClick: () => alert("Button clicked!"),
 };
 
-export const WithoutIcons = Template.bind({});
-WithoutIcons.args = {
+export const КнопкаБезЗначков = Template.bind({});
+КнопкаБезЗначков.args = {
   children: "Добавить",
   primary: false,
   onClick: () => alert("Button without icons clicked!"),
 };
 
-export const WithOnlyLeftIcon = Template.bind({});
-WithOnlyLeftIcon.args = {
+export const КнопкаСЗначкомСлева = Template.bind({});
+КнопкаСЗначкомСлева.args = {
   glyphNameLeft: "arrow-left",
   children: "Добавить",
   primary: true,
   onClick: () => alert("Button with left icon clicked!"),
 };
 
-export const WithOnlyRightIcon = Template.bind({});
-WithOnlyRightIcon.args = {
+export const КнопкаСЗначкомСправа = Template.bind({});
+КнопкаСЗначкомСправа.args = {
   glyphNameRight: "arrow-right",
   children: "Добавить",
   primary: false,

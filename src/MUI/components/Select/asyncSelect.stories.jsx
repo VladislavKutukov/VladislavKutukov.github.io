@@ -1,9 +1,8 @@
 import { Field, Form } from "react-final-form";
 import { Button, Stack } from "@mui/material";
 import AsyncSelect from "./asyncSelect";
-
 export default {
-  title: "MUI/AsyncSelect",
+  title: "MUI/Асинхронный выбор",
   component: AsyncSelect,
   argTypes: {},
 };
@@ -36,7 +35,7 @@ function ExampleForm({ initialValues, ...props }) {
               sx={{ width: "140px" }}
               onClick={handleSubmit}
             >
-              Submit
+              Отправить
             </Button>
           </Stack>
         </form>
@@ -54,11 +53,11 @@ const loadOptions = () =>
   new Promise((resolve) => {
     const options = {
       entries: [
-        { id: 0, displayName: "0 option" },
-        { id: 1, displayName: "1 option" },
-        { id: 2, displayName: "2 option" },
-        { id: 3, displayName: "3 option" },
-        { id: 4, displayName: "4 option" },
+        { id: 0, displayName: "Вариант 0" },
+        { id: 1, displayName: "Вариант 1" },
+        { id: 2, displayName: "Вариант 2" },
+        { id: 3, displayName: "Вариант 3" },
+        { id: 4, displayName: "Вариант 4" },
       ],
       total: 5,
     };
@@ -66,32 +65,33 @@ const loadOptions = () =>
   });
 
 const Template = (args) => <ExampleForm {...args} />;
-export const Default = Template.bind({});
-Default.args = {
-  label: "Default",
+
+export const Стандартный = Template.bind({});
+Стандартный.args = {
+  label: "Стандартный",
 };
 
-export const WithPlaceholder = Template.bind({});
-WithPlaceholder.args = {
-  placeholder: "With placeholder",
+export const СПодсказкой = Template.bind({});
+СПодсказкой.args = {
+  placeholder: "Выберите значение",
 };
 
-export const WithInitialValue = Template.bind({});
-WithInitialValue.args = {
+export const СНачальнымЗначением = Template.bind({});
+СНачальнымЗначением.args = {
   initialValues: {
-    select: { id: 0, displayName: "0 option" },
+    select: { id: 0, displayName: "Вариант 0" },
   },
-  label: "With initial value",
+  label: "С начальным значением",
 };
 
-export const MultipleWithInitialValue = Template.bind({});
-MultipleWithInitialValue.args = {
+export const МножественныйВыбор = Template.bind({});
+МножественныйВыбор.args = {
   initialValues: {
     select: [
-      { id: 0, displayName: "0 option" },
-      { id: 4, displayName: "4 option" },
+      { id: 0, displayName: "Вариант 0" },
+      { id: 4, displayName: "Вариант 4" },
     ],
   },
-  label: "Multiple with initial value",
+  label: "Множественный выбор",
   multiple: true,
 };

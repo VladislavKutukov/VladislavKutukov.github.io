@@ -36,81 +36,81 @@ const FormExample = () => {
       style={{ maxWidth: 600 }}
       initialValues={{ variant: 'filled' }}
     >
-      <Form.Item label="Form variant" name="variant">
-        <Segmented options={['outlined', 'filled', 'borderless', 'underlined']} />
+      <Form.Item label="Стиль формы" name="variant">
+        <Segmented options={['Контурный', 'Заливка', 'Без рамки', 'Подчёркнутый']} />
       </Form.Item>
 
-      <Form.Item label="Input" name="Input" rules={[{ required: true, message: 'Please input!' }]}>
+      <Form.Item label="Поле ввода" name="Input" rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}>
         <Input />
       </Form.Item>
 
       <Form.Item
-        label="InputNumber"
+        label="Числовое поле"
         name="InputNumber"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <InputNumber style={{ width: '100%' }} />
       </Form.Item>
 
       <Form.Item
-        label="TextArea"
+        label="Текстовая область"
         name="TextArea"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <Input.TextArea />
       </Form.Item>
 
       <Form.Item
-        label="Mentions"
+        label="Упоминания"
         name="Mentions"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <Mentions />
       </Form.Item>
 
       <Form.Item
-        label="Select"
+        label="Выпадающий список"
         name="Select"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <Select />
       </Form.Item>
 
       <Form.Item
-        label="Cascader"
+        label="Каскадный список"
         name="Cascader"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <Cascader />
       </Form.Item>
 
       <Form.Item
-        label="TreeSelect"
+        label="Древовидный список"
         name="TreeSelect"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <TreeSelect />
       </Form.Item>
 
       <Form.Item
-        label="DatePicker"
+        label="Выбор даты"
         name="DatePicker"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <DatePicker />
       </Form.Item>
 
       <Form.Item
-        label="RangePicker"
+        label="Диапазон дат"
         name="RangePicker"
-        rules={[{ required: true, message: 'Please input!' }]}
+        rules={[{ required: true, message: 'Пожалуйста, заполните!' }]}
       >
         <RangePicker />
       </Form.Item>
 
       <Form.Item wrapperCol={{ offset: 6, span: 16 }}>
         <Button type="primary" htmlType="submit">
-          Submit
+          Отправить
         </Button>
       </Form.Item>
     </Form>

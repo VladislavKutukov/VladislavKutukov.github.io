@@ -4,32 +4,32 @@ const Template = function (args) {
   return <CircularProgressbarWithSummary {...args} />;
 };
 
-const Default = Template.bind({});
-const WithCaptions = Template.bind({});
-const NoLabel = Template.bind({});
+const ОбычныйПрогрессбар = Template.bind({});
+const ОбычныйПрогрессбар2 = Template.bind({});
+const ПрогрессбарБезПодписей = Template.bind({});
 
-Default.args = {
+ОбычныйПрогрессбар.args = {
   percentage: 98,
   from: "От",
   to: "До",
   summary: "98%",
 };
 
-WithCaptions.args = {
+ОбычныйПрогрессбар2.args = {
   percentage: 18,
   from: "От",
   to: "До",
   summary: "18%",
 };
 
-NoLabel.args = {
+ПрогрессбарБезПодписей.args = {
   percentage: 18,
   summary: "18%",
 };
 
 export default {
   component: CircularProgressbarWithSummary,
-  title: "ECOPRO/CircularProgressBar",
+  title: "ECOPRO/Круглый Прогресс бар",
 };
 
-export { Default, WithCaptions, NoLabel };
+export { ОбычныйПрогрессбар, ОбычныйПрогрессбар2, ПрогрессбарБезПодписей };

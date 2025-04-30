@@ -4,7 +4,7 @@ import React from "react";
 import Notification from "./Notification";
 
 export default {
-  title: "ECOPRO/Notification",
+  title: "ECOPRO/Уведомления",
   component: Notification,
 };
 
@@ -28,13 +28,13 @@ const messages = [
 
 const Template = (args) => <Notification {...args} />;
 
-export const NoMessages = Template.bind({});
-NoMessages.args = {
+export const БезУведомлений = Template.bind({});
+БезУведомлений.args = {
   messages: [],
 };
 
-export const WithMessages = Template.bind({});
-WithMessages.args = {
+export const СУведомлениями = Template.bind({});
+СУведомлениями.args = {
   messages: messages,
   onClose: (id) => {
     console.log(`Notification closed with id: ${id}`);

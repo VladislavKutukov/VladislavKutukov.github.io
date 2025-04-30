@@ -1,11 +1,11 @@
 import InputPassword from "./InputPassword";
 
 export default {
-  title: "ECOPRO/Password",
+  title: "ECOPRO/Строка для ввода пароля",
   component: InputPassword,
   argTypes: {
     className: {
-      description: "Имя класса. Для задания дополнительных стилей",
+      description: "Имя класса для дополнительных стилей",
       defaultValue: "",
       table: {
         type: { summary: "string" },
@@ -14,7 +14,7 @@ export default {
       control: { type: "text" },
     },
     disabled: {
-      description: "Блокировка инпута.",
+      description: "Блокировка поля ввода",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -32,7 +32,7 @@ export default {
       control: { type: "text" },
     },
     isRequired: {
-      description: 'Флаг "обязательное поле"',
+      description: "Обязательное поле",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -41,7 +41,7 @@ export default {
       control: { type: "boolean" },
     },
     label: {
-      description: "Лейбл",
+      description: "Метка поля",
       defaultValue: "Пароль",
       table: {
         type: { summary: "string" },
@@ -50,7 +50,7 @@ export default {
       control: { type: "text" },
     },
     name: {
-      description: "Имя",
+      description: "Имя поля",
       defaultValue: "inputName",
       table: {
         type: { summary: "string" },
@@ -59,7 +59,7 @@ export default {
       control: { type: "text" },
     },
     onChange: {
-      description: "Контроллер инпута",
+      description: "Обработчик изменения",
       defaultValue: null,
       table: {
         type: { summary: "function" },
@@ -67,7 +67,7 @@ export default {
       },
     },
     placeholder: {
-      description: "Плейсхолдер",
+      description: "Подсказка в поле",
       defaultValue: "Введите пароль",
       table: {
         type: { summary: "string" },
@@ -76,7 +76,7 @@ export default {
       control: { type: "text" },
     },
     value: {
-      description: "Значение инпута",
+      description: "Значение поля",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -88,30 +88,30 @@ export default {
 
 const Template = (args) => <InputPassword {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Стандартный = Template.bind({});
+Стандартный.args = {
   label: "Введите пароль",
 };
 
-export const Large = Template.bind({});
-Large.args = {
+export const Большой = Template.bind({});
+Большой.args = {
   label: "Введите пароль",
   className: "size--large",
 };
 
-export const Small = Template.bind({});
-Small.args = { label: "Введите пароль", className: "size--small" };
+export const Маленький = Template.bind({});
+Маленький.args = { label: "Введите пароль", className: "size--small" };
 
-export const NoLabel = Template.bind({});
-NoLabel.args = {
+export const БезМетки = Template.bind({});
+БезМетки.args = {
   label: "",
 };
 
-export const Required = Template.bind({});
-Required.args = { label: "Введите пароль", isRequired: true };
+export const Обязательный = Template.bind({});
+Обязательный.args = { label: "Введите пароль", isRequired: true };
 
-export const Inactive = Template.bind({});
-Inactive.args = { label: "Введите пароль", disabled: true };
+export const Неактивный = Template.bind({});
+Неактивный.args = { label: "Введите пароль", disabled: true };
 
-export const Error = Template.bind({});
-Error.args = { label: "Введите пароль", error: "Ошибка" };
+export const СОшибкой = Template.bind({});
+СОшибкой.args = { label: "Введите пароль", error: "Ошибка" };

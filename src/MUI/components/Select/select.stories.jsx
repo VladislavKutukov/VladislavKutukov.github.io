@@ -4,7 +4,7 @@ import Select from "./select";
 import Icon from "../Icon/icon";
 
 export default {
-  title: "MUI/Select",
+  title: "MUI/Выпадающий список",
   component: Select,
   argTypes: {
     input: {
@@ -22,67 +22,68 @@ export default {
     },
     multiple: {
       type: "boolean",
-      description: "Является ли селект мультиселектом",
+      description: "Множественный выбор",
       options: [true, false],
       control: { type: "radio" },
     },
     options: {
       type: "array",
-      description: "Массив с опциями селекта",
+      description: "Доступные варианты",
     },
     placeholder: {
       type: "string",
-      description: "Плэйсхолдер поля",
+      description: "Подсказка в поле",
       control: { type: "text" },
     },
     fullWidth: {
       type: "boolean",
-      description: "Занимает ли селект всю ширину контейнера",
+      description: "На всю ширину",
       options: [true, false],
       control: { type: "radio" },
     },
     required: {
       type: "boolean",
-      description: "Обязательно ли поле",
+      description: "Обязательное поле",
       options: [true, false],
       control: { type: "radio" },
     },
     icon: {
       type: "ReactNode",
-      description: "Левая иконка",
+      description: "Иконка",
     },
   },
 };
+
 const exampleOptions = [
   {
-    label: "option1",
+    label: "Вариант 1",
     id: "1",
   },
   {
-    label: "option2",
+    label: "Вариант 2",
     id: "2",
   },
   {
-    label: "option3",
+    label: "Вариант 3",
     id: "3",
   },
   {
-    label: "option4",
+    label: "Вариант 4",
     id: "4",
   },
   {
-    label: "option5",
+    label: "Вариант 5",
     id: "5",
   },
   {
-    label: "option6",
+    label: "Вариант 6",
     id: "6",
   },
 ];
 
 const CustomForm = (props) => {
   return (
-    <Form initialValues={{}} onSubmit={() => {}}>
+    <Form initialValues={{}} onSubmit={() => { }}>
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <Field name="select">
@@ -103,43 +104,41 @@ const CustomForm = (props) => {
 
 const Template = (args) => <CustomForm {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-  label: "Select label",
+export const Стандартный = Template.bind({});
+Стандартный.args = {
+  label: "Выберите значение",
 };
 
-export const DefaultWithError = Template.bind({});
-DefaultWithError.args = {
-  label: "Select label",
+export const СОшибкой = Template.bind({});
+СОшибкой.args = {
+  label: "Выберите значение",
   meta: {
     touched: true,
     invalid: true,
-    error: "Error",
+    error: "Ошибка выбора",
   },
 };
 
-export const DefaultLongValue = Template.bind({});
-DefaultLongValue.args = {
+export const СДлиннымЗначением = Template.bind({});
+СДлиннымЗначением.args = {
   input: {
     value: {
       id: 1,
-      label:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+      label: "Очень длинное значение для проверки отображения в выпадающем списке",
     },
-    onChange: () => {},
+    onChange: () => { },
   },
-  label: "Select label",
+  label: "Выберите значение",
 };
 
-export const DefaultLongLabel = Template.bind({});
-DefaultLongLabel.args = {
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+export const СДлиннойПодписью = Template.bind({});
+СДлиннойПодписью.args = {
+  label: "Очень длинное название поля для проверки отображения в интерфейсе",
 };
 
-export const DefaultWithIcon = Template.bind({});
-DefaultWithIcon.args = {
-  label: "Select label",
+export const СИконкой = Template.bind({});
+СИконкой.args = {
+  label: "Выберите значение",
   icon: (
     <Icon
       name="search"
@@ -150,47 +149,45 @@ DefaultWithIcon.args = {
   ),
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  label: "Select label",
+export const Компактный = Template.bind({});
+Компактный.args = {
+  label: "Выберите значение",
   size: "small",
 };
 
-export const SmallWithError = Template.bind({});
-SmallWithError.args = {
-  label: "Select label",
+export const КомпактныйСОшибкой = Template.bind({});
+КомпактныйСОшибкой.args = {
+  label: "Выберите значение",
   size: "small",
   meta: {
     touched: true,
     invalid: true,
-    error: "Error",
+    error: "Ошибка выбора",
   },
 };
 
-export const SmallLongValue = Template.bind({});
-SmallLongValue.args = {
+export const КомпактныйСДлиннымЗначением = Template.bind({});
+КомпактныйСДлиннымЗначением.args = {
   input: {
     value: {
       id: 1,
-      label:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+      label: "Очень длинное значение для компактного списка",
     },
-    onChange: () => {},
+    onChange: () => { },
   },
-  label: "Select label",
+  label: "Выберите значение",
   size: "small",
 };
 
-export const SmallLongLabel = Template.bind({});
-SmallLongLabel.args = {
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+export const КомпактныйСДлиннойПодписью = Template.bind({});
+КомпактныйСДлиннойПодписью.args = {
+  label: "Очень длинное название для компактного поля",
   size: "small",
 };
 
-export const SmallWithIcon = Template.bind({});
-SmallWithIcon.args = {
-  label: "Select label",
+export const КомпактныйСИконкой = Template.bind({});
+КомпактныйСИконкой.args = {
+  label: "Выберите значение",
   icon: (
     <Icon
       name="search"
@@ -202,51 +199,49 @@ SmallWithIcon.args = {
   size: "small",
 };
 
-export const DefaultMulti = Template.bind({});
-DefaultMulti.args = {
-  label: "Select label",
+export const МножественныйВыбор = Template.bind({});
+МножественныйВыбор.args = {
+  label: "Выберите значения",
   multiple: true,
 };
 
-export const DefaultWithErrorMulti = Template.bind({});
-DefaultWithErrorMulti.args = {
-  label: "Select label",
+export const МножественныйСОшибкой = Template.bind({});
+МножественныйСОшибкой.args = {
+  label: "Выберите значения",
   error: true,
-  helperText: "Error",
+  helperText: "Ошибка выбора",
   meta: {
     touched: true,
     invalid: true,
-    error: "Error",
+    error: "Ошибка выбора",
   },
   multiple: true,
 };
 
-export const DefaultLongValueMulti = Template.bind({});
-DefaultLongValueMulti.args = {
+export const МножественныйСДлиннымЗначением = Template.bind({});
+МножественныйСДлиннымЗначением.args = {
   input: {
     value: [
       {
         id: 1,
-        label:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+        label: "Длинное значение для множественного выбора",
       },
     ],
-    onChange: () => {},
+    onChange: () => { },
   },
-  label: "Select label",
+  label: "Выберите значения",
   multiple: true,
 };
 
-export const DefaultLongLabelMulti = Template.bind({});
-DefaultLongLabelMulti.args = {
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+export const МножественныйСДлиннойПодписью = Template.bind({});
+МножественныйСДлиннойПодписью.args = {
+  label: "Очень длинное название для множественного выбора",
   multiple: true,
 };
 
-export const DefaultWithIconMulti = Template.bind({});
-DefaultWithIconMulti.args = {
-  label: "Select label",
+export const МножественныйСИконкой = Template.bind({});
+МножественныйСИконкой.args = {
+  label: "Выберите значения",
   icon: (
     <Icon
       name="search"
@@ -258,55 +253,53 @@ DefaultWithIconMulti.args = {
   multiple: true,
 };
 
-export const SmallMulti = Template.bind({});
-SmallMulti.args = {
-  label: "Select label",
+export const КомпактныйМножественный = Template.bind({});
+КомпактныйМножественный.args = {
+  label: "Выберите значения",
   size: "small",
   multiple: true,
 };
 
-export const SmallWithErrorMulti = Template.bind({});
-SmallWithErrorMulti.args = {
-  label: "Select label",
+export const КомпактныйМножественныйСОшибкой = Template.bind({});
+КомпактныйМножественныйСОшибкой.args = {
+  label: "Выберите значения",
   size: "small",
   error: true,
-  helperText: "Error",
+  helperText: "Ошибка выбора",
   meta: {
     touched: true,
     invalid: true,
-    error: "Error",
+    error: "Ошибка выбора",
   },
   multiple: true,
 };
 
-export const SmallLongValueMulti = Template.bind({});
-SmallLongValueMulti.args = {
+export const КомпактныйМножественныйСДлиннымЗначением = Template.bind({});
+КомпактныйМножественныйСДлиннымЗначением.args = {
   input: {
     value: [
       {
         id: 1,
-        label:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+        label: "Длинное значение для компактного множественного выбора",
       },
     ],
-    onChange: () => {},
+    onChange: () => { },
   },
-  label: "Select label",
+  label: "Выберите значения",
   size: "small",
   multiple: true,
 };
 
-export const SmallLongLabelMulti = Template.bind({});
-SmallLongLabelMulti.args = {
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+export const КомпактныйМножественныйСДлиннойПодписью = Template.bind({});
+КомпактныйМножественныйСДлиннойПодписью.args = {
+  label: "Длинное название для компактного множественного выбора",
   size: "small",
   multiple: true,
 };
 
-export const SmallWithIconMulti = Template.bind({});
-SmallWithIconMulti.args = {
-  label: "Select label",
+export const КомпактныйМножественныйСИконкой = Template.bind({});
+КомпактныйМножественныйСИконкой.args = {
+  label: "Выберите значения",
   icon: (
     <Icon
       name="search"

@@ -1,7 +1,7 @@
 import InputOutline from "./InputOutline";
 
 export default {
-  title: "ECOPRO/Input",
+  title: "ECOPRO/Строка Ввода",
   component: InputOutline,
   argTypes: {
     autoComplete: {
@@ -123,33 +123,34 @@ export default {
 
 const Template = (args) => <InputOutline {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Стандартный = Template.bind({});
+Стандартный.args = {
   label: "Станция ГНСС",
-  className: "size--large",
 };
 
-export const Large = Template.bind({});
-Large.args = { label: "Станция ГНСС", className: "size--large" };
+export const Большой = Template.bind({});
+Большой.args = { label: "Станция ГНСС", className: "size--large" };
 
-export const Small = Template.bind({});
-Small.args = { label: "Станция ГНСС", className: "size--small" };
+export const Маленький = Template.bind({});
+Маленький.args = { label: "Станция ГНСС", className: "size--small" };
 
-export const Required = Template.bind({});
-Required.args = { label: "Станция ГНСС", isRequired: true };
+export const Обязательный = Template.bind({});
+Обязательный.args = { label: "Станция ГНСС", isRequired: true };
 
-export const Inactive = Template.bind({});
-Inactive.args = {
+export const Неактивный = Template.bind({});
+Неактивный.args = {
   disabled: true,
   label: "Станция ГНСС",
-  value: "Значение инпута",
+  value: "Введите название станции",
 };
-export const NumberInput = Template.bind({});
-NumberInput.args = {
+
+export const Числовой = Template.bind({});
+Числовой.args = {
   value: 10,
   type: "number",
   min: 0,
   onChange: (e) => console.log(e.target.value),
 };
-export const Error = Template.bind({});
-Error.args = { label: "Станция ГНСС", error: "Ошибка" };
+
+export const СОшибкой = Template.bind({});
+СОшибкой.args = { label: "Станция ГНСС", error: "Ошибка" };

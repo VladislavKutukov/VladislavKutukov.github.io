@@ -17,7 +17,7 @@ const MultiSelect = () => (
   <Select
     mode="tags"
     style={{ width: '100%' }}
-    placeholder="Tags Mode"
+    placeholder="Выберите тэги"
     onChange={handleChange}
     options={options}
   />

@@ -2,10 +2,10 @@ import React from "react";
 import PopconfirmExample from "./popconfirm";
 
 export default {
-  title: "antd/PopconfirmWindow",
+  title: "antd/Окошко подтверждения действия",
   component: PopconfirmExample,
 };
 
 const Template = (args) => <PopconfirmExample {...args} />;
 
-export const Popconfirm = Template.bind({});
+export const ПодтверждениеДействияПриНажатииНаКнопку = Template.bind({});

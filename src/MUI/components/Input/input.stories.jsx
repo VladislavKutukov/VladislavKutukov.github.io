@@ -2,7 +2,7 @@ import Input from "./input";
 import Icon from "../Icon/icon";
 
 export default {
-  title: "MUI/Input",
+  title: "MUI/Строка Ввода",
   component: Input,
   argTypes: {
     input: {
@@ -23,162 +23,156 @@ export default {
 
 const Template = (args) => <Input {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const Стандартный = Template.bind({});
+Стандартный.args = {
   input: {
-    value: "Test text",
+    value: "Тестовый текст",
   },
-  label: "Input label",
+  label: "Подпись поля",
   meta: {
     touched: false,
   },
 };
 
-export const DefaultWithError = Template.bind({});
-DefaultWithError.args = {
+export const СтандартныйСОшибкой = Template.bind({});
+СтандартныйСОшибкой.args = {
   input: {
-    value: "Test text",
+    value: "Тестовый текст",
   },
-  label: "Input label",
+  label: "Подпись поля",
   error: true,
-  helperText: "Error",
+  helperText: "Ошибка",
 };
 
-export const DefaultLongValue = Template.bind({});
-DefaultLongValue.args = {
+export const СтандартныйСДлиннымЗначением = Template.bind({});
+СтандартныйСДлиннымЗначением.args = {
   input: {
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+    value: "Очень длинный текст для проверки отображения в поле ввода при переполнении контентом",
   },
-  label: "Input label",
+  label: "Подпись поля",
 };
 
-export const DefaultLongLabel = Template.bind({});
-DefaultLongLabel.args = {
+export const СтандартныйСДлиннойПодписью = Template.bind({});
+СтандартныйСДлиннойПодписью.args = {
   input: {
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+    value: "Текст",
   },
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+  label: "Очень длинная подпись поля для проверки отображения при переполнении контентом",
 };
 
-export const DefaultWithStartAdornet = Template.bind({});
-DefaultWithStartAdornet.args = {
+export const СтандартныйСИконкойСлева = Template.bind({});
+СтандартныйСИконкойСлева.args = {
   input: {
-    value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    value: "Текст с иконкой",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputProps: {
     startAdornment: <Icon name="search" />,
   },
 };
 
-export const DefaultWithEndAdornet = Template.bind({});
-DefaultWithEndAdornet.args = {
+export const СтандартныйСИконкойСправа = Template.bind({});
+СтандартныйСИконкойСправа.args = {
   input: {
-    value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    value: "Текст с иконкой",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputProps: {
     endAdornment: <Icon name="search" />,
   },
 };
 
-export const DefaultWithoutShrink = Template.bind({});
-DefaultWithoutShrink.args = {
+export const СтандартныйБезАвтоУменьшения = Template.bind({});
+СтандартныйБезАвтоУменьшения.args = {
   input: {
     value: "",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputLabelProps: {
     shrink: false,
   },
 };
 
-export const Small = Template.bind({});
-Small.args = {
+export const Маленький = Template.bind({});
+Маленький.args = {
   input: {
-    value: "Test text",
+    value: "Тестовый текст",
   },
-  label: "Input label",
+  label: "Подпись поля",
   size: "small",
 };
 
-export const SmallWithError = Template.bind({});
-SmallWithError.args = {
+export const МаленькийСОшибкой = Template.bind({});
+МаленькийСОшибкой.args = {
   input: {
-    value: "Test text",
+    value: "Тестовый текст",
   },
-  label: "Input label",
+  label: "Подпись поля",
   size: "small",
   error: true,
-  helperText: "Error",
+  helperText: "Ошибка",
 };
 
-export const SmallLongValue = Template.bind({});
-SmallLongValue.args = {
+export const МаленькийСДлиннымЗначением = Template.bind({});
+МаленькийСДлиннымЗначением.args = {
   input: {
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+    value: "Очень длинный текст для маленького поля ввода",
   },
-  label: "Input label",
+  label: "Подпись поля",
   size: "small",
 };
 
-export const SmallLongLabel = Template.bind({});
-SmallLongLabel.args = {
+export const МаленькийСДлиннойПодписью = Template.bind({});
+МаленькийСДлиннойПодписью.args = {
   input: {
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+    value: "Текст",
   },
-  label:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus tellus id faucibus convallis. In diam eros, dapibus non quam et, varius aliquet metus.",
+  label: "Очень длинная подпись для маленького поля",
   size: "small",
 };
 
-export const SmallWithStartAdornet = Template.bind({});
-SmallWithStartAdornet.args = {
+export const МаленькийСИконкойСлева = Template.bind({});
+МаленькийСИконкойСлева.args = {
   input: {
-    value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    value: "Текст с иконкой",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputProps: {
     startAdornment: <Icon name="search" />,
   },
   size: "small",
 };
 
-export const SmallWithEndAdornet = Template.bind({});
-SmallWithEndAdornet.args = {
+export const МаленькийСИконкойСправа = Template.bind({});
+МаленькийСИконкойСправа.args = {
   input: {
-    value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    value: "Текст с иконкой",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputProps: {
     endAdornment: <Icon name="search" />,
   },
   size: "small",
 };
 
-export const SmallWithoutShrink = Template.bind({});
-SmallWithoutShrink.args = {
+export const МаленькийБезАвтоУменьшения = Template.bind({});
+МаленькийБезАвтоУменьшения.args = {
   input: {
     value: "",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputLabelProps: {
     shrink: false,
   },
   size: "small",
 };
 
-export const SmallWithoutShrinkWithIcon = Template.bind({});
-SmallWithoutShrinkWithIcon.args = {
+export const МаленькийБезАвтоУменьшенияСИконкой = Template.bind({});
+МаленькийБезАвтоУменьшенияСИконкой.args = {
   input: {
     value: "",
   },
-  label: "Input label",
+  label: "Подпись поля",
   InputProps: {
     startAdornment: <Icon name="search" />,
   },

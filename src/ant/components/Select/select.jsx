@@ -8,28 +8,28 @@ const handleChange = value => {
 const Selectors = () => (
   <Space wrap>
     <Select
-      defaultValue="lucy"
+      defaultValue="иван"
       style={{ width: 120 }}
       onChange={handleChange}
       options={[
-        { value: 'jack', label: 'Jack' },
-        { value: 'lucy', label: 'Lucy' },
-        { value: 'Yiminghe', label: 'yiminghe' },
-        { value: 'disabled', label: 'Disabled', disabled: true },
+        { value: 'иван', label: 'Иван' },
+        { value: 'мария', label: 'Мария' },
+        { value: 'сергей', label: 'Сергей' },
+        { value: 'disabled', label: 'Антон', disabled: true },
       ]}
     />
     <Select
-      defaultValue="lucy"
+      defaultValue="мария"
       style={{ width: 120 }}
       disabled
-      options={[{ value: 'lucy', label: 'Lucy' }]}
+      options={[{ value: 'мария', label: 'Мария' }]}
     />
     <Select
-      defaultValue="lucy"
+      defaultValue="сергей"
       style={{ width: 120 }}
       allowClear
-      options={[{ value: 'lucy', label: 'Lucy' }]}
-      placeholder="select it"
+      options={[{ value: 'сергей', label: 'Сергей' }]}
+      placeholder="Выберите вариант"
     />
   </Space>
 );

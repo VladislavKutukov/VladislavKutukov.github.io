@@ -8,7 +8,7 @@ const options = [
     children: [
       {
         value: "hangzhou",
-        label: "Палетные задания",
+        label: "Полетные задания",
         children: [
           {
             value: "xihu",
@@ -24,7 +24,7 @@ const options = [
     children: [
       {
         value: "hangzhou",
-        label: "Палетные задания",
+        label: "Полетные задания",
         children: [
           {
             value: "xihu",

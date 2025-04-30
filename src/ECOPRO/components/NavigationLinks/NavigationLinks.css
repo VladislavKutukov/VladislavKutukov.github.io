@@ -18,6 +18,8 @@
 
 .navigation_links__link:hover {
   color: black;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .navigation_links__link.navigation_links--active {

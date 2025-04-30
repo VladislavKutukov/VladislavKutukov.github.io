@@ -8,4 +8,4 @@ export default {
 
 const Common = (args, text) => <BasicButtons />
 
-export const CommonButton = Common.bind({})
+export const ВариантыКнопки = Common.bind({})

@@ -1,7 +1,7 @@
 import Switcher from "./Switcher";
 
 export default {
-  title: "ECOPRO/Switcher",
+  title: "ECOPRO/Переключатели",
   component: Switcher,
   argTypes: {
     className: {
@@ -53,22 +53,22 @@ export default {
 
 const Template = (args) => <Switcher {...args} />;
 
-export const Default = Template.bind({});
+export const Обычный = Template.bind({});
 
-export const Checked = Template.bind({});
-Checked.args = {
+export const Переключенный = Template.bind({});
+Переключенный.args = {
   checked: true,
   name: "input1",
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
+export const Недоступный = Template.bind({});
+Недоступный.args = {
   disabled: true,
   name: "input2",
 };
 
-export const DisabledAndChecked = Template.bind({});
-DisabledAndChecked.args = {
+export const НедоступныйИПереключенный = Template.bind({});
+НедоступныйИПереключенный.args = {
   disabled: true,
   checked: true,
   name: "input3",
