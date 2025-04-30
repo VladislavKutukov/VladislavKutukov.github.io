@@ -1,0 +1,188 @@
+.glyph {
+  --glyph-size: 1rem;
+  --glyph-fill: #25282b;
+  align-items: center;
+  display: inline-flex;
+  height: var(--glyph-size);
+  width: var(--glyph-size);
+}
+
+[class*='glyph__'] {
+  width: 100%;
+  fill-rule: evenodd;
+}
+
+.glyph__align_left,
+.glyph__align_right {
+  fill: var(--glyph-fill);
+}
+
+.glyph__menu {
+  --glyph-fill: white;
+  stroke: var(--glyph-fill);
+}
+
+.glyph__filter,
+.glyph__edit,
+.glyph__cross,
+.glyph__magnifier {
+  stroke: var(--glyph-fill);
+}
+
+.button {
+  background-color: #fff;
+  border: 0.077em solid var(--color-yellow-7-corporate);
+  border-radius: 0.308em;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.16em;
+  margin: 0;
+  padding: 0.538em 1.077em 0.463em;
+  transition: background-color 120ms ease-out;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  background-color: var(--color-yellow-8);
+  outline: 0.167em solid var(--color-yellow-7-corporate);
+  outline-offset: 0.167em;
+}
+
+.button:hover {
+  background-color: var(--color-yellow-8);
+}
+
+.button:disabled {
+  background-color: #fff;
+  border-color: #fef0d8;
+  color: var(--color-gray-6);
+  cursor: default;
+}
+
+.button--primary {
+  background-color: var(--color-yellow-7-corporate);
+}
+
+.button--primary:disabled {
+  background-color: var(--color-yellow-3);
+}
+
+.button--small {
+  padding: 0.308em 1.077em 0.231em;
+}
+
+.button--big {
+  padding: 0.923em 1.077em 0.8475em;
+}
+.notification__wrapper {
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-x: hidden;
+  padding: 0.714rem;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  row-gap: 1em;
+  top: 0;
+  width: 22.857rem;
+  z-index: 2000;
+}
+
+.toast {
+  animation: slide_in 300ms ease-out;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 0.333em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  font-size: 1.071em; /* 15px */
+  min-width: 18.333em;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+.toast--close {
+  animation: slide_out 300ms ease-in;
+  transform: translateX(120%);
+}
+
+.toast__mark_area {
+  padding: 1em 0 1em 1.333em;
+}
+
+.toast__message {
+  padding-left: 1em;
+  padding-top: 1em;
+  flex-grow: 1;
+}
+
+.toast--warning {
+  background-color: #fff6e6;
+}
+
+.toast--error {
+  background-color: #fef4f3;
+}
+
+.toast--success {
+  background-color: #ecffea;
+}
+
+.toast__close_button {
+  align-self: stretch;
+  background-color: transparent;
+  border-radius: 0 0.357em 0.357em 0;
+  border: none;
+  border-left: 2px solid #7d7d7d1a;
+  font-size: 1.071rem;
+  margin: 0;
+  padding: 1em;
+}
+
+.toast__close_button:hover {
+  background-color: #7d7d7d1a;
+}
+
+.toast__close_button:active {
+  background-color: #7d7d7d2a;
+}
+
+.toast__close_button:disabled {
+  visibility: hidden;
+}
+
+.mark {
+  width: 2.571rem;
+}
+
+@keyframes slide_in {
+  0% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+
+/*# sourceMappingURL=ECOPRO-components-Notification-Notification-stories.ad993c51.chunk.css.map*/

@@ -1,0 +1,140 @@
+.top_bar {
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0.286em 0.286em 0 #0000000d;
+  column-gap: 2.5em;
+  display: flex;
+  height: 5em;
+  padding: 0 2.143em;
+}
+
+.top_bar__body {
+  flex-grow: 1;
+}
+
+.top_bar__menu_glyph {
+  --glyph-size: 1.5em;
+}
+
+.top_bar__main_menu_button {
+  padding: 0.917em;
+}
+
+.top_bar__separator {
+  background-color: #e5e5e5;
+  height: 2.5em;
+  width: 0.071em;
+}
+
+.button {
+  background-color: #fff;
+  border: 0.077em solid var(--color-yellow-7-corporate);
+  border-radius: 0.308em;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.16em;
+  margin: 0;
+  padding: 0.538em 1.077em 0.463em;
+  transition: background-color 120ms ease-out;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  background-color: var(--color-yellow-8);
+  outline: 0.167em solid var(--color-yellow-7-corporate);
+  outline-offset: 0.167em;
+}
+
+.button:hover {
+  background-color: var(--color-yellow-8);
+}
+
+.button:disabled {
+  background-color: #fff;
+  border-color: #fef0d8;
+  color: var(--color-gray-6);
+  cursor: default;
+}
+
+.button--primary {
+  background-color: var(--color-yellow-7-corporate);
+}
+
+.button--primary:disabled {
+  background-color: var(--color-yellow-3);
+}
+
+.button--small {
+  padding: 0.308em 1.077em 0.231em;
+}
+
+.button--big {
+  padding: 0.923em 1.077em 0.8475em;
+}
+.glyph {
+  --glyph-size: 1rem;
+  --glyph-fill: #25282b;
+  align-items: center;
+  display: inline-flex;
+  height: var(--glyph-size);
+  width: var(--glyph-size);
+}
+
+[class*='glyph__'] {
+  width: 100%;
+  fill-rule: evenodd;
+}
+
+.glyph__align_left,
+.glyph__align_right {
+  fill: var(--glyph-fill);
+}
+
+.glyph__menu {
+  --glyph-fill: white;
+  stroke: var(--glyph-fill);
+}
+
+.glyph__filter,
+.glyph__edit,
+.glyph__cross,
+.glyph__magnifier {
+  stroke: var(--glyph-fill);
+}
+
+.navigation_links__list {
+  align-items: center;
+  column-gap: 0.563em;
+  display: flex;
+  font-size: 1.143em;
+  line-height: 1.16em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation_links__link {
+  border-radius: 0.313em;
+  color: #00000070;
+  padding: 0.25em 0.938em;
+  text-decoration: none;
+}
+
+.navigation_links__link:hover {
+  color: black;
+}
+
+.navigation_links__link.navigation_links--active {
+  background-color: #7d7d7d;
+  color: white;
+}
+
+
+/*# sourceMappingURL=ECOPRO-components-TopBar-TopBar-stories.c2866f66.chunk.css.map*/
